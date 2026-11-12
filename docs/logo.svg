@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" width="48" height="64">
   <!-- Beauty Budget: een handspiegel met een euroteken in het glas -->
-  <circle cx="24" cy="22" r="18" fill="#fffafa" stroke="#4a1d33" stroke-width="2.5"/>
-  <circle cx="24" cy="22" r="13.5" fill="none" stroke="#4a1d33" stroke-width="1" opacity=".35"/>
-  <path d="M30 15.5a8 8 0 1 0 0 13" fill="none" stroke="#b23a5a" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M16.5 20h10M16.5 24.5h9" stroke="#b23a5a" stroke-width="2" stroke-linecap="round"/>
-  <path d="M24 40v18" stroke="#4a1d33" stroke-width="5" stroke-linecap="round"/>
-  <circle cx="24" cy="40.5" r="3.5" fill="#4a1d33"/>
+  <circle cx="24" cy="22" r="18" fill="#ffffff" stroke="#111111" stroke-width="2.5"/>
+  <circle cx="24" cy="22" r="13.5" fill="none" stroke="#111111" stroke-width="1" opacity=".35"/>
+  <path d="M30 15.5a8 8 0 1 0 0 13" fill="none" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16.5 20h10M16.5 24.5h9" stroke="#c8102e" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 40v18" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="24" cy="40.5" r="3.5" fill="#111111"/>
 </svg>
