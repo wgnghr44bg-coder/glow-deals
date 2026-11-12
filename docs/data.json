@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-12T19:40+00:00",
+ "bijgewerkt": "2026-11-12T19:56+00:00",
  "koersen": {
   "GBP": 1.1962437944853161,
   "USD": 0.902445627650934,
@@ -12,7 +12,7 @@
    "eu": true,
    "levering": "Levert in Nederland.",
    "home": "https://www.notino.nl/charlotte-tilbury/",
-   "bijgewerkt": "2026-11-12T19:36+00:00",
+   "bijgewerkt": "2026-11-12T19:56+00:00",
    "fout": null,
    "items": [
     {
@@ -21,6 +21,30 @@
      "munt": "EUR",
      "url": "https://www.notino.nl/charlotte-tilbury/pillow-talk-lip-and-cheek-glow-multifunctionele-balsem-voor-lippen-en-wangen/",
      "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696170055_01-o__241111.jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Matte Revolution",
+     "prijs": 32.0,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/matte-revolution-matterende-lippenstift/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696176699_01-o__241120.jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Cheek To Chic",
+     "prijs": 35.0,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/pillow-talk-cheek-to-chic-poeder-blush/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060542729246_01-o__241111.jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Colour Chameleon",
+     "prijs": 28.9,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/colour-chameleon-oogschaduw-stift/p-16263660/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060332320462_01-o__241120.jpg",
      "voorraad": true
     },
     {
@@ -40,30 +64,6 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Cheek To Chic",
-     "prijs": 35.0,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/pillow-talk-cheek-to-chic-poeder-blush/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060542729246_01-o__241111.jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Charlotte's Magic Cream",
-     "prijs": 109.0,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/charlottes-magic-cream-verstevigende-hydraterende-creme-spf-15/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696178259_01-o__250701.jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Luxury Palette",
-     "prijs": 54.5,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/luxury-palette-oogschaduw-palette/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696171809_01-o__241111.jpg",
-     "voorraad": true
-    },
-    {
      "naam": "Charlotte Tilbury Full Fat Lashes",
      "prijs": 15.9,
      "munt": "EUR",
@@ -72,19 +72,11 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Hot Lips",
-     "prijs": 28.5,
+     "naam": "Charlotte Tilbury Magic Night",
+     "prijs": 36.5,
      "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/hot-lips-cremige-lippenstift-met-matterend-effect/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060332325948_01-o__241120.jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Matte Revolution",
-     "prijs": 32.0,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/matte-revolution-matterende-lippenstift/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696176699_01-o__241120.jpg",
+     "url": "https://www.notino.nl/charlotte-tilbury/magic-night-cream-verstevigende-nachtcreme/p-16264819/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446604185_01-o__241111.jpg",
      "voorraad": true
     },
     {
@@ -104,27 +96,11 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Colour Chameleon",
-     "prijs": 28.9,
+     "naam": "Charlotte Tilbury Pillow Talk Eyeliner",
+     "prijs": 25.9,
      "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/colour-chameleon-oogschaduw-stift/p-16263660/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060332320462_01-o__241120.jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Beautiful Skin Foundation",
-     "prijs": 33.9,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/beautiful-skin-foundation-hydraterende-make-up/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446600392_01-o__241111.jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Airbrush Flawless",
-     "prijs": 59.0,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/airbrush-flawless-foundation-extreem-dekkende-foundation-met-matterend-effect/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060542725682_01-o__241111.jpg",
+     "url": "https://www.notino.nl/charlotte-tilbury/pillow-talk-eyeliner-langhoudende-eyeliner/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446610346_01-o__241120.jpg",
      "voorraad": true
     },
     {
@@ -136,11 +112,35 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Magic Night",
-     "prijs": 36.5,
+     "naam": "Charlotte Tilbury Hot Lips",
+     "prijs": 28.5,
      "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/magic-night-cream-verstevigende-nachtcreme/p-16264819/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446604185_01-o__241111.jpg",
+     "url": "https://www.notino.nl/charlotte-tilbury/hot-lips-cremige-lippenstift-met-matterend-effect/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060332325948_01-o__241120.jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Charlotte's Magic Cream",
+     "prijs": 109.0,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/charlottes-magic-cream-verstevigende-hydraterende-creme-spf-15/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696178259_01-o__250701.jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Airbrush Flawless",
+     "prijs": 59.0,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/airbrush-flawless-foundation-extreem-dekkende-foundation-met-matterend-effect/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060542725682_01-o__241111.jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Beautiful Skin Foundation",
+     "prijs": 33.9,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/beautiful-skin-foundation-hydraterende-make-up/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446600392_01-o__241111.jpg",
      "voorraad": true
     },
     {
@@ -152,19 +152,11 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Pillow Talk Eyeliner",
-     "prijs": 25.9,
+     "naam": "Charlotte Tilbury Luxury Palette",
+     "prijs": 54.5,
      "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/pillow-talk-eyeliner-langhoudende-eyeliner/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446610346_01-o__241120.jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Magic Cream",
-     "prijs": 188.0,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/magic-cream-hydraterende-gezichtscreme-spf-15/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446602532_01-o__260428.jpg",
+     "url": "https://www.notino.nl/charlotte-tilbury/luxury-palette-oogschaduw-palette/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060696171809_01-o__241111.jpg",
      "voorraad": true
     },
     {
@@ -176,20 +168,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Airbrush Flawless Finish Refillable",
-     "prijs": 47.5,
+     "naam": "Charlotte Tilbury Magic Cream",
+     "prijs": 188.0,
      "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/airbrush-flawless-finish-verhelderende-compacte-poeder/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446607858_01-o__241104.jpg",
-     "voorraad": false
-    },
-    {
-     "naam": "Charlotte Tilbury Airbrush Flawless Finish",
-     "prijs": 66.9,
-     "munt": "EUR",
-     "url": "https://www.notino.nl/charlotte-tilbury/airbrush-flawless-finish-verhelderende-compacte-poeder-7147884/",
-     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446644594_01-o__260428.jpg",
-     "voorraad": false
+     "url": "https://www.notino.nl/charlotte-tilbury/magic-cream-hydraterende-gezichtscreme-spf-15/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446602532_01-o__260428.jpg",
+     "voorraad": true
     },
     {
      "naam": "Charlotte Tilbury Airbrush Flawless Finish",
@@ -200,11 +184,27 @@
      "voorraad": false
     },
     {
+     "naam": "Charlotte Tilbury Airbrush Flawless Finish Refillable",
+     "prijs": 47.5,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/airbrush-flawless-finish-verhelderende-compacte-poeder/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446607858_01-o__241104.jpg",
+     "voorraad": false
+    },
+    {
      "naam": "Charlotte Tilbury Hot Lips 2",
      "prijs": 21.5,
      "munt": "EUR",
      "url": "https://www.notino.nl/charlotte-tilbury/hot-lips-2-matterende-lippenstift-navulling/",
      "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5060542724500_01-o__241120.jpg",
+     "voorraad": false
+    },
+    {
+     "naam": "Charlotte Tilbury Airbrush Brightening Flawless Finish",
+     "prijs": 37.9,
+     "munt": "EUR",
+     "url": "https://www.notino.nl/charlotte-tilbury/airbrush-brightening-flawless-finish-verhelderende-compacte-poeder-travelpack/p-16263946/",
+     "img": "https://cdn.notinoimg.com/list_2k//charlotte_tilbury/5056446612791_01-o__241111.jpg",
      "voorraad": false
     }
    ]
@@ -215,7 +215,7 @@
    "eu": true,
    "levering": "Levert in Nederland (vanuit Duitsland).",
    "home": "https://www.breuninger.com/nl/merken/charlotte-tilbury/",
-   "bijgewerkt": "2026-11-12T19:36+00:00",
+   "bijgewerkt": "2026-11-12T19:56+00:00",
    "fout": null,
    "items": [
     {
@@ -386,7 +386,7 @@
    "eu": true,
    "levering": "Levert in Nederland via de Nederlandse webshop, prijzen in euro.",
    "home": "https://www.spacenk.com/nl/merken/c/charlotte-tilbury",
-   "bijgewerkt": "2026-11-12T19:36+00:00",
+   "bijgewerkt": "2026-11-12T19:56+00:00",
    "fout": null,
    "items": [
     {
@@ -1054,7 +1054,7 @@
    "eu": false,
    "levering": "Levert in Nederland vanuit het VK; controleer bij afrekenen of er btw of invoerkosten bijkomen.",
    "home": "https://www.cultbeauty.com/c/brands/charlotte-tilbury/",
-   "bijgewerkt": "2026-11-12T19:36+00:00",
+   "bijgewerkt": "2026-11-12T19:56+00:00",
    "fout": null,
    "items": [
     {
@@ -1328,21 +1328,21 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Cryo-Recovery Eye Serum",
-     "prijs": 54.05,
-     "munt": "EUR",
-     "was": null,
-     "url": "https://www.cultbeauty.com/p/charlotte-tilbury-cryo-recovery-eye-serum/17960160/",
-     "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13313746-1094896611756241.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
-     "voorraad": true
-    },
-    {
      "naam": "Charlotte Tilbury Brow Cheat",
      "prijs": 32.5,
      "munt": "EUR",
      "was": null,
      "url": "https://www.cultbeauty.com/p/charlotte-tilbury-brow-cheat/13323492/",
      "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13323492-2115354656165158.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Cryo-Recovery Eye Serum",
+     "prijs": 54.05,
+     "munt": "EUR",
+     "was": null,
+     "url": "https://www.cultbeauty.com/p/charlotte-tilbury-cryo-recovery-eye-serum/17960160/",
+     "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13313746-1094896611756241.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
      "voorraad": true
     },
     {
@@ -1373,21 +1373,21 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Charlotte's Magic Night Cream Refill",
-     "prijs": 110.0,
-     "munt": "EUR",
-     "was": null,
-     "url": "https://www.cultbeauty.com/p/charlotte-tilbury-charlotte-s-magic-night-cream-refill/13313744/",
-     "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13313744-1855350014136200.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
-     "voorraad": true
-    },
-    {
      "naam": "Charlotte Tilbury Charlotte's Magic Lip Oil Crystal Elixir",
      "prijs": 36.0,
      "munt": "EUR",
      "was": null,
      "url": "https://www.cultbeauty.com/p/charlotte-tilbury-charlotte-s-magic-lip-oil-crystal-elixir/13313712/",
      "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13313712-1255350013930076.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Charlotte's Magic Night Cream Refill",
+     "prijs": 110.0,
+     "munt": "EUR",
+     "was": null,
+     "url": "https://www.cultbeauty.com/p/charlotte-tilbury-charlotte-s-magic-night-cream-refill/13313744/",
+     "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13313744-1855350014136200.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
      "voorraad": true
     },
     {
@@ -1490,12 +1490,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Powder & Sculpt Brush",
-     "prijs": 45.0,
+     "naam": "Charlotte Tilbury Beautiful Skin Island Glow Easy Tanning Drops- Medium/Deep 30ml",
+     "prijs": 43.7,
      "munt": "EUR",
      "was": null,
-     "url": "https://www.cultbeauty.com/p/charlotte-tilbury-powder-sculpt-brush/13313698/",
-     "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13313698-1374896608699370.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
+     "url": "https://www.cultbeauty.com/p/charlotte-tilbury-beautiful-skin-island-glow-easy-tanning-drops-medium-deep-30ml/16168170/",
+     "img": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/16168170-4375222204967261.jpg&format=webp&auto=avif&width=640&height=640&fit=crop",
      "voorraad": true
     },
     {
@@ -1596,8 +1596,8 @@
    "eu": false,
    "levering": "Niet elk product wordt naar Nederland verstuurd: Amazon laat dit zien bij het product. Invoerkosten worden bij het afrekenen bijgeteld.",
    "home": "https://www.amazon.com/s?k=charlotte+tilbury&rh=p_89%3ACharlotte+Tilbury",
-   "bijgewerkt": "2026-11-12T19:29+00:00",
-   "fout": "geen producten gevonden",
+   "bijgewerkt": "2026-11-12T19:56+00:00",
+   "fout": null,
    "items": [
     {
      "naam": "Charlotte Tilbury Mini Hollywood Blush & Glow Glide Palette, Powder Blush & Highlighter Compact, Face Makeup Duo, Travel S...",
@@ -1643,7 +1643,7 @@
    "eu": true,
    "levering": "Levert in Nederland.",
    "home": "https://www.charlottetilbury.com/nl",
-   "bijgewerkt": "2026-11-12T19:40+00:00",
+   "bijgewerkt": "2026-11-12T19:56+00:00",
    "fout": null,
    "items": [
     {
