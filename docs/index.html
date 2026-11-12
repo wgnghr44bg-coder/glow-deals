@@ -20,32 +20,30 @@
 
 :root { --container: 1200px; }
 
-/* De kop van de eigenaar: zwart, met lichtbundel, draaiende cirkels en glanzende titel */
-:root { --hero-bg: #050505; --hero-tekst: #ffffff; --hero-grijs: #aaaaaa; --hero-licht: #cccccc; --hero-donker: #777777;
-  --hero-glans: rgba(255,255,255,.12); --hero-ring: rgba(255,255,255,.12); --font-hero: Arial, sans-serif; }
-.bb-hero { position: relative; overflow: hidden; background: var(--hero-bg); color: var(--hero-tekst); padding: 55px 15px; text-align: center; font-family: var(--font-hero); }
-/* Bewegende lichtbundel */
-.bb-hero::before { content: ""; position: absolute; inset: -100%; background: linear-gradient(115deg, transparent 45%, var(--hero-glans) 50%, transparent 55%); animation: sweep 7s linear infinite; pointer-events: none; }
-/* Bewegende cirkels */
-.bb-orbit { position: absolute; width: 260px; height: 260px; border: 1px solid var(--hero-ring); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: orbit 15s linear infinite; pointer-events: none; }
-.bb-orbit.two { width: 360px; height: 360px; animation-direction: reverse; }
-.bb-content { position: relative; z-index: 2; }
-.bb-eyebrow { font-size: 10px; letter-spacing: 5px; color: var(--hero-grijs); animation: fadeIn 2s ease both; }
-.bb-title { font-family: var(--font-hero); font-size: clamp(32px, 7vw, 65px); font-weight: 900; letter-spacing: 3px; line-height: 1.1; margin: 20px auto 12px; max-width: none;
-  background: linear-gradient(90deg, var(--hero-donker), var(--hero-tekst), var(--hero-grijs), var(--hero-tekst)); background-size: 300% auto; color: transparent; background-clip: text; -webkit-background-clip: text; animation: shine 5s linear infinite; }
-.bb-line { width: 0; height: 1px; background: var(--hero-tekst); margin: 20px auto; animation: expand 2s ease forwards; }
-.bb-subtitle { color: var(--hero-licht); font-size: 11px; letter-spacing: 3px; animation: fadeIn 3s ease both; }
-.bb-bottom { margin-top: 35px; font-size: 10px; letter-spacing: 3px; animation: pulse 3s ease-in-out infinite; }
-@keyframes sweep { from { transform: translateX(-40%) rotate(0deg); } to { transform: translateX(40%) rotate(0deg); } }
-@keyframes orbit { to { rotate: 360deg; } }
-@keyframes shine { to { background-position: 300% center; } }
-@keyframes expand { to { width: 100px; } }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes pulse { 50% { opacity: .45; } }
-@media (prefers-reduced-motion: reduce) {
-  .bb-hero *, .bb-hero::before { animation: none !important; }
-  .bb-line { width: 100px; } /* zonder animatie blijft de lijn anders onzichtbaar */
-}
+/* De banner van de eigenaar: foto blijft stil, met lichtstreep, fonkelende sterren en glitter erover */
+:root { --bb-zwart: #050505; --bb-wit: #ffffff; --bb-rose-wit: #f4e7e1; }
+.bb-banner { position: relative; display: block; width: 100%; overflow: hidden; background: var(--bb-zwart); isolation: isolate; line-height: 0; }
+.bb-banner img { display: block; width: 100%; height: auto; }
+.bb-banner:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -4px; }
+.bb-effects { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
+/* Elegante lichtstreep die af en toe over de afbeelding glijdt */
+.bb-light-sweep { position: absolute; inset: -55% -65%;
+  background: linear-gradient(112deg, transparent 46%, rgba(255,255,255,.015) 48%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.04) 52%, transparent 55%);
+  mix-blend-mode: screen; transform: translateX(-70%); animation: bbSweep 9s ease-in-out infinite; }
+/* Fonkelende vierpuntige sterren */
+.bb-star { position: absolute; left: var(--x); top: var(--y); width: var(--size, 14px); height: var(--size, 14px); opacity: 0; transform: scale(.25) rotate(0deg);
+  animation: bbTwinkle var(--duration, 3.5s) ease-in-out var(--delay, 0s) infinite; filter: drop-shadow(0 0 5px rgba(255,255,255,.9)); }
+.bb-star::before, .bb-star::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: linear-gradient(90deg, var(--bb-wit), var(--bb-rose-wit), var(--bb-wit)); }
+.bb-star::before { width: 100%; height: 2px; }
+.bb-star::after { width: 2px; height: 100%; }
+.bb-star b { position: absolute; width: 35%; height: 35%; left: 32.5%; top: 32.5%; border-radius: 50%; background: var(--bb-wit); box-shadow: 0 0 8px 3px rgba(255,255,255,.8); }
+/* Kleine glitterpuntjes */
+.bb-glitter { position: absolute; left: var(--x); top: var(--y); width: var(--size, 3px); height: var(--size, 3px); border-radius: 50%; background: var(--bb-wit);
+  box-shadow: 0 0 8px 2px rgba(255,255,255,.8); opacity: 0; animation: bbGlitter var(--duration, 2.8s) ease-in-out var(--delay, 0s) infinite; }
+@keyframes bbSweep { 0%, 12% { transform: translateX(-70%); opacity: 0; } 28% { opacity: .9; } 65% { transform: translateX(70%); opacity: .75; } 82%, 100% { transform: translateX(70%); opacity: 0; } }
+@keyframes bbTwinkle { 0%, 100% { opacity: 0; transform: scale(.25) rotate(0deg); } 38% { opacity: 1; transform: scale(1) rotate(45deg); } 58% { opacity: .35; transform: scale(.65) rotate(75deg); } }
+@keyframes bbGlitter { 0%, 100% { opacity: 0; transform: scale(.4); } 45% { opacity: .95; transform: scale(1.5); } 70% { opacity: .2; transform: scale(.7); } }
+@media (prefers-reduced-motion: reduce) { .bb-light-sweep, .bb-star, .bb-glitter { animation: none; } }
 .banner .stand { margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); }
 .kop { position: sticky; top: 0; z-index: var(--z-sticky); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-rule); }
 .kop-rij { display: flex; align-items: center; gap: var(--space-lg); padding-block: var(--space-sm); }
@@ -164,16 +162,29 @@ footer p + p { margin-top: var(--space-xs); }
 </style>
 </head>
 <body>
-<header class="bb-hero">
-  <div class="bb-orbit" aria-hidden="true"></div>
-  <div class="bb-orbit two" aria-hidden="true"></div>
-  <div class="bb-content">
-    <div class="bb-eyebrow">THE BEAUTY DESTINATION</div>
-    <h1 class="bb-title">BEAUTY BUDGET</h1>
-    <div class="bb-line" aria-hidden="true"></div>
-    <div class="bb-subtitle">DISCOVER • COMPARE • SAVE</div>
-    <div class="bb-bottom">YOUR BEAUTY. YOUR RULES.</div>
-  </div>
+<header>
+  <h1 class="visually-hidden">Beauty Budget</h1>
+  <a class="bb-banner" href="#vergelijk" aria-label="Beauty Budget presenteert Charlotte Tilbury, naar de bestsellers">
+    <img src="banner.jpg" width="1536" height="864" alt="Beauty Budget presenteert Charlotte Tilbury – The Art of Beauty" fetchpriority="high">
+    <div class="bb-effects" aria-hidden="true">
+      <div class="bb-light-sweep"></div>
+      <span class="bb-star" style="--x:7%;--y:13%;--size:15px;--duration:3.8s;--delay:.2s"><b></b></span>
+      <span class="bb-star" style="--x:47%;--y:17%;--size:12px;--duration:3.2s;--delay:1.2s"><b></b></span>
+      <span class="bb-star" style="--x:59%;--y:29%;--size:18px;--duration:4s;--delay:.8s"><b></b></span>
+      <span class="bb-star" style="--x:91%;--y:12%;--size:16px;--duration:3.5s;--delay:1.7s"><b></b></span>
+      <span class="bb-star" style="--x:84%;--y:56%;--size:13px;--duration:3.6s;--delay:2.1s"><b></b></span>
+      <span class="bb-star" style="--x:53%;--y:73%;--size:12px;--duration:3.4s;--delay:1.5s"><b></b></span>
+      <span class="bb-star" style="--x:96%;--y:78%;--size:17px;--duration:4.1s;--delay:.5s"><b></b></span>
+      <span class="bb-star" style="--x:14%;--y:84%;--size:13px;--duration:3.7s;--delay:2.4s"><b></b></span>
+      <span class="bb-glitter" style="--x:28%;--y:19%;--duration:2.5s;--delay:.3s"></span>
+      <span class="bb-glitter" style="--x:65%;--y:11%;--duration:3.1s;--delay:1.4s"></span>
+      <span class="bb-glitter" style="--x:79%;--y:34%;--duration:2.7s;--delay:.8s"></span>
+      <span class="bb-glitter" style="--x:52%;--y:61%;--duration:3.2s;--delay:2s"></span>
+      <span class="bb-glitter" style="--x:94%;--y:48%;--duration:2.6s;--delay:1.1s"></span>
+      <span class="bb-glitter" style="--x:12%;--y:60%;--duration:3.4s;--delay:2.4s"></span>
+      <span class="bb-glitter" style="--x:72%;--y:88%;--duration:2.9s;--delay:.5s"></span>
+    </div>
+  </a>
 </header>
 
 <div class="kop">
