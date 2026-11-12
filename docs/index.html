@@ -20,8 +20,26 @@
 
 :root { --container: 1200px; }
 
-/* Bovenste strook en kop */
-.strook { background: var(--color-ink); color: var(--color-paper); font-size: var(--text-sm); text-align: center; padding: var(--space-xs) var(--space-md); }
+/* De kop van de eigenaar: donker met rosé-goud */
+:root { --kop-donker: #171318; --kop-midden: #292027; --kop-rose: #DDA397; --kop-rose-licht: #E8B6A9; --kop-rose-1: #F5D2C7; --kop-rose-2: #C8877B; --kop-rose-3: #F8D8CE; --kop-tekst: #ffffff;
+  --font-kop: Georgia, serif; }
+.beauty-header { background: linear-gradient(120deg, var(--kop-donker), var(--kop-midden), var(--kop-donker)); color: var(--kop-tekst); padding: 28px 6%; position: relative; overflow: clip; }
+.beauty-header::after { content: ""; position: absolute; width: 350px; height: 350px; border: 1px solid color-mix(in srgb, var(--kop-rose) 25%, transparent); border-radius: 50%; right: -150px; top: -220px; pointer-events: none; }
+.header-content { max-width: 1250px; margin: auto; display: flex; align-items: center; gap: 20px; color: inherit; text-decoration: none; }
+.header-content:focus-visible { outline: 2px solid var(--kop-rose); outline-offset: 4px; }
+.logo-icon { width: 65px; height: 65px; border: 2px solid var(--kop-rose); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--kop-rose-licht); font-size: 32px; flex-shrink: 0; }
+.logo-text { font-family: var(--font-kop); font-size: clamp(32px, 6vw, 58px); font-weight: bold; letter-spacing: -1.5px; margin: 0; max-width: none; line-height: 1.05; color: var(--kop-tekst); }
+.logo-text span { background: linear-gradient(90deg, var(--kop-rose-1), var(--kop-rose-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.tagline { color: var(--kop-rose); font-size: 11px; letter-spacing: 3px; margin-top: 8px; }
+.logo-line { width: 100%; height: 2px; margin-top: 18px; background: linear-gradient(90deg, transparent, var(--kop-rose), var(--kop-rose-3), transparent); }
+@media (max-width: 480px) {
+  .beauty-header { padding: 24px 18px; }
+  .header-content { gap: 13px; }
+  .logo-icon { width: 48px; height: 48px; font-size: 24px; }
+  .logo-text { font-size: 34px; }
+  .tagline { font-size: 8px; letter-spacing: 1.5px; }
+}
+.banner .stand { margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); }
 .kop { position: sticky; top: 0; z-index: var(--z-sticky); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-rule); }
 .kop-rij { display: flex; align-items: center; gap: var(--space-lg); padding-block: var(--space-sm); }
 .merk { display: flex; align-items: center; gap: var(--space-sm); color: var(--color-ink); text-decoration: none; flex: none; }
@@ -139,22 +157,20 @@ footer p + p { margin-top: var(--space-xs); }
 </style>
 </head>
 <body>
-<p class="strook" id="tijd">Prijzen worden geladen.</p>
+<header class="beauty-header">
+  <a class="header-content" href="./" aria-label="Beauty Budget, naar het begin">
+    <div class="logo-icon" aria-hidden="true">✧</div>
+    <div>
+      <h1 class="logo-text">Beauty <span>Budget</span></h1>
+      <div class="tagline">BEAUTY • LUXURY • SMART SHOPPING</div>
+    </div>
+  </a>
+  <div class="logo-line" aria-hidden="true"></div>
+</header>
 
-<header class="kop">
+<div class="kop">
   <div class="container">
     <div class="kop-rij">
-      <a class="merk" href="./" aria-label="Beauty Budget, naar het begin">
-        <svg class="logo" viewBox="0 0 48 64" width="48" height="64" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="22" r="18" fill="var(--color-paper-hi)" stroke="var(--color-ink)" stroke-width="2.5"/>
-          <circle cx="24" cy="22" r="13.5" fill="none" stroke="var(--color-ink)" stroke-width="1" opacity=".35"/>
-          <path d="M30 15.5a8 8 0 1 0 0 13" fill="none" stroke="var(--color-sale)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M16.5 20h10M16.5 24.5h9" stroke="var(--color-sale)" stroke-width="2" stroke-linecap="round"/>
-          <path d="M24 40v18" stroke="var(--color-ink)" stroke-width="5" stroke-linecap="round"/>
-          <circle cx="24" cy="40.5" r="3.5" fill="var(--color-ink)"/>
-        </svg>
-        <h1>Beauty Budget</h1>
-      </a>
       <div class="zoekvak">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <label class="visually-hidden" for="zoek">Zoeken</label>
@@ -167,12 +183,13 @@ footer p + p { margin-top: var(--space-xs); }
       <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="winkels" data-tab="winkels">Winkels &amp; kosten</button>
     </div>
   </div>
-</header>
+</div>
 
 <main class="container">
   <div class="banner">
     <h2>De laagste prijzen voor Charlotte Tilbury</h2>
     <p>Elke dag vergeleken bij winkels die naar Nederland leveren. Je bestelt in de winkel zelf.</p>
+    <p class="stand" id="tijd">Prijzen worden geladen.</p>
   </div>
 
   <section id="vergelijk" role="tabpanel" aria-label="Bestsellers vergelijken">
@@ -362,7 +379,7 @@ document.getElementById("zoek").addEventListener("input", e => { if (e.target.va
 
 fetch("data.json", {cache: "no-store"}).then(r => r.json()).then(d => {
   DATA = d; AANBOD = bereken(d);
-  document.getElementById("tijd").textContent = "Prijzen bijgewerkt: " +
+  document.getElementById("tijd").textContent = "Bijgewerkt: " +
     new Date(d.bijgewerkt).toLocaleString("nl-NL", {weekday:"short", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"});
   toonVergelijk(); toonAlles(); toonWinkels();
 }).catch(() => {
