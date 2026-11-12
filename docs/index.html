@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glow Deals</title>
+<meta name="description" content="De laagste prijzen voor Charlotte Tilbury make-up, te bestellen naar Nederland.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<style>
+:root{
+  --bg:#fbf6f4;--kaart:#ffffff;--tekst:#2b1f22;--zacht:#7a6468;--lijn:#eadcd9;
+  --accent:#b4536a;--accent-zacht:#f6e3e7;--goed:#2f7d4f;--goed-zacht:#e3f2e8;--let:#9a6a12;--let-zacht:#fbf0d9;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1a1416;--kaart:#241c1f;--tekst:#f3e9ea;--zacht:#b7a3a7;--lijn:#3a2e32;
+  --accent:#e58ba0;--accent-zacht:#3a2229;--goed:#6fcf95;--goed-zacht:#1d3326;--let:#e9bc63;--let-zacht:#3a2f17;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tekst);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:28px 16px 8px;max-width:1000px;margin:0 auto}
+h1{margin:0;font:600 30px/1.1 Georgia,"Times New Roman",serif;letter-spacing:.3px}
+h1 span{color:var(--accent)}
+.sub{color:var(--zacht);margin:6px 0 0;font-size:15px}
+main{max-width:1000px;margin:0 auto;padding:0 16px 40px}
+.tabs{display:flex;gap:8px;margin:18px 0 14px;overflow-x:auto}
+.tab{border:1px solid var(--lijn);background:var(--kaart);color:var(--tekst);padding:9px 16px;border-radius:999px;font:inherit;font-size:15px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.zoek{width:100%;padding:12px 14px;border:1px solid var(--lijn);border-radius:12px;background:var(--kaart);color:var(--tekst);font:inherit;margin-bottom:10px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:14px;color:var(--zacht)}
+.filters label{display:flex;align-items:center;gap:6px;background:var(--kaart);border:1px solid var(--lijn);padding:6px 10px;border-radius:999px;cursor:pointer}
+select{font:inherit;font-size:14px;padding:6px 10px;border-radius:999px;border:1px solid var(--lijn);background:var(--kaart);color:var(--tekst)}
+.kaart{background:var(--kaart);border:1px solid var(--lijn);border-radius:16px;padding:14px;margin-bottom:12px}
+.prod{display:flex;gap:12px;align-items:flex-start}
+.prod img{width:72px;height:72px;object-fit:contain;border-radius:10px;background:#fff;flex:none}
+.prod h3{margin:0 0 4px;font-size:16px;font-weight:600}
+.beste{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.prijs{font-size:22px;font-weight:700}
+.was{color:var(--zacht);text-decoration:line-through;font-size:14px}
+.korting{background:var(--goed-zacht);color:var(--goed);font-weight:600;font-size:13px;padding:2px 8px;border-radius:999px}
+.winkel{color:var(--zacht);font-size:14px}
+.knop{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:8px 14px;border-radius:10px;font-weight:600;font-size:14px;margin-top:8px}
+.rij{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--lijn);font-size:14px}
+.rij a{color:var(--tekst)}
+.rij .r{text-align:right;white-space:nowrap}
+.extra{color:var(--let);background:var(--let-zacht);font-size:12px;padding:1px 7px;border-radius:999px;margin-left:4px}
+.zelf{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.zelf a{font-size:13px;color:var(--accent);background:var(--accent-zacht);padding:4px 10px;border-radius:999px;text-decoration:none}
+details summary{cursor:pointer;color:var(--zacht);font-size:14px;margin-top:6px}
+.lijst{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.lijst .kaart{margin:0;display:flex;flex-direction:column}
+.lijst img{width:100%;height:150px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:8px}
+.lijst h3{font-size:14px;font-weight:600;margin:0 0 6px;flex:1}
+.info{font-size:14px;color:var(--zacht)}
+.info h2{color:var(--tekst);font-size:18px;margin:0 0 6px}
+.info table{width:100%;border-collapse:collapse;margin-top:6px}
+.info td{padding:6px 0;border-top:1px solid var(--lijn);vertical-align:top}
+.fout{color:var(--let)}
+footer{max-width:1000px;margin:0 auto;padding:0 16px 30px;color:var(--zacht);font-size:12px}
+.leeg{color:var(--zacht);text-align:center;padding:30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Glow <span>Deals</span> ✨</h1>
+  <p class="sub">De laagste prijzen voor Charlotte Tilbury, te bestellen naar Nederland. <span id="tijd"></span></p>
+</header>
+<main>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="vergelijk">Bestsellers vergelijken</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="alles">Alle aanbiedingen</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="winkels">Winkels &amp; kosten</button>
+  </div>
+
+  <section id="vergelijk"></section>
+
+  <section id="alles" hidden>
+    <input class="zoek" id="zoek" type="search" placeholder="Zoek, bv. pillow talk, magic cream, blush…">
+    <div class="filters">
+      <select id="sorteer">
+        <option value="korting">Grootste korting eerst</option>
+        <option value="laag">Laagste prijs eerst</option>
+        <option value="hoog">Hoogste prijs eerst</option>
+      </select>
+      <label><input type="checkbox" id="alleenEU" checked> Alleen EU (geen invoerkosten)</label>
+      <label><input type="checkbox" id="alleenKorting"> Alleen met korting</label>
+    </div>
+    <div class="lijst" id="lijst"></div>
+  </section>
+
+  <section id="winkels" hidden></section>
+</main>
+<footer>
+  Prijzen worden elke dag automatisch opgehaald en kunnen intussen veranderd zijn: controleer de prijs altijd in de winkel zelf.
+  Deze site is niet verbonden aan Charlotte Tilbury of aan de genoemde winkels.
+</footer>
+
+<script>
+// Bestsellers om te vergelijken. 'zoek' moet in de naam staan, 'niet' juist niet (sets, mini's en navullingen tellen apart).
+const BESTSELLERS = [
+  {naam:"Charlotte's Magic Cream (50 ml)", maat:/\b50\s?ml/i, zoek:/magic cream/i, niet:/\b(night|eye|mini|travel|kit|navulling|forever|body|set|duo|trio|refill|navul|wonderland|secret|routine)\b/i},
+  {naam:"Airbrush Flawless Setting Spray (100 ml)", maat:/\b100\s?ml\b/i, zoek:/setting spray/i, niet:/\b(mini|kit|duo|set|trio)\b/i},
+  {naam:"Airbrush Flawless Finish (poeder)", zoek:/flawless finish/i, niet:/\b(brightening|refill|navul|kit|set|mini)\b/i},
+  {naam:"Hollywood Flawless Filter", zoek:/flawless filter/i, niet:/\b(mini|kit|set|duo|trio)\b/i},
+  {naam:"Beautiful Skin Foundation", zoek:/beautiful skin foundation/i, niet:/\b(kit|set)\b/i},
+  {naam:"Airbrush Flawless Foundation", zoek:/airbrush flawless foundation|^charlotte tilbury airbrush flawless$/i, niet:/\b(kit|set|mini)\b/i},
+  {naam:"Magic Away Concealer", zoek:/magic away/i, niet:/\b(kit|set)\b/i},
+  {naam:"Pillow Talk Lip Cheat (lippotlood)", zoek:/lip cheat/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Matte Revolution lippenstift", zoek:/matte revolution/i, niet:/\b(kit|set|duo|mini|trio|refill|navul)\b/i},
+  {naam:"K.I.S.S.I.N.G lippenstift", zoek:/k\.?i\.?s\.?s\.?i\.?n\.?g/i, niet:/\b(kit|set|mini|trio)\b/i},
+  {naam:"Collagen Lip Bath", zoek:/lip bath/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Lip Lustre (lipgloss)", zoek:/lip lustre/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Pillow Talk Lip & Cheek Glow", zoek:/lip and cheek glow|lip & cheek glow|lip \+ cheek glow/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Beauty Light Wand (highlighter)", zoek:/beauty light wand/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Matte Beauty Blush Wand", zoek:/blush wand/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Hollywood Contour Wand", zoek:/contour wand/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Unreal Blush", zoek:/unreal blush/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Cheek to Chic blush", zoek:/cheek to chic/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Pillow Talk Push Up Lashes (mascara)", zoek:/push up lashes/i, niet:/\b(kit|set|duo|mini|trio)\b/i},
+  {naam:"Luxury Palette (oogschaduw)", zoek:/luxury palette/i, niet:/\b(kit|set)\b/i},
+  {naam:"Magic Serum Crystal Elixir", zoek:/magic serum/i, niet:/\b(kit|set|mini|duo)\b/i},
+];
+
+// Mini's, reisformaten, navullingen en sets zijn een ander product: die tellen nooit mee bij het vergelijken.
+const GEEN = /\b(mini|travel|refill|navulling|kit|set|duo|trio|bundle|wonderland)\b/i;
+
+// Winkels die geen automatisch ophalen toelaten: hier kijk je zelf, met de productnaam al ingevuld.
+// 'nl' = levert in Nederland; 'rijden' = Belgische/Duitse winkel, levert mogelijk niet naar NL (ophalen of pakketpunt over de grens).
+const ZELF_KIJKEN = [
+  ["Douglas", "nl", q=>`https://www.douglas.nl/nl/search?q=${q}`],
+  ["ICI Paris XL", "nl", q=>`https://www.iciparisxl.nl/search?text=${q}`],
+  ["de Bijenkorf", "nl", q=>`https://www.debijenkorf.nl/zoeken?query=${q}`],
+  ["bol", "nl", q=>`https://www.bol.com/nl/nl/s/?searchtext=${q}`],
+  ["Zalando", "nl", q=>`https://www.zalando.nl/catalogus/?q=${q}`],
+  ["Lookfantastic", "nl", q=>`https://www.lookfantastic.nl/search?q=${q}`],
+  ["Douglas België", "rijden", q=>`https://www.douglas.be/nl/search?q=${q}`],
+  ["Douglas Duitsland", "rijden", q=>`https://www.douglas.de/de/search?q=${q}`],
+  ["Sephora Duitsland", "rijden", q=>`https://www.sephora.de/search?q=${q}`],
+  ["Niche Beauty (DE)", "rijden", q=>`https://www.niche-beauty.com/de-de/search?q=${q}`],
+];
+
+const BTW = 1.21;  // invoer-btw bij bestellen buiten de EU
+let DATA = null, AANBOD = [];
+
+const euro = n => "€ " + n.toFixed(2).replace(".", ",");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const kortNaam = s => s.replace(/^charlotte tilbury,?\s*/i, "");
+
+function bereken(d){
+  const uit = [];
+  for (const [sleutel, w] of Object.entries(d.winkels)) {
+    for (const it of w.items) {
+      const k = d.koersen[it.munt] ?? 1;
+      const eur = it.prijs * k, was = it.was ? it.was * k : null;
+      uit.push({...it, winkel: w.naam, sleutel, eu: w.eu, land: w.land,
+        eur, was: was && was > eur ? was : null,
+        nl: w.eu ? eur : eur * BTW,                      // geschatte prijs in NL (buiten EU + btw)
+        korting: was && was > eur ? Math.round((1 - eur / was) * 100) : 0});
+    }
+  }
+  return uit;
+}
+
+function prijsRegel(a){
+  const extra = a.eu ? "" : `<span class="extra" title="Buiten de EU: 21% btw en mogelijk inklaringskosten komen erbij">+ invoerkosten</span>`;
+  return `${euro(a.eur)}${extra}`;
+}
+
+function toonVergelijk(){
+  const html = BESTSELLERS.map(b => {
+    // Staat er een inhoud in de naam die niet de gevraagde maat is (bv. 15 ml i.p.v. 50 ml), dan telt hij niet mee.
+    const goedeMaat = a => !b.maat || b.maat.test(a.naam) || !/\d+\s?(ml|g)\b/i.test(a.naam);
+    const treffers = AANBOD.filter(a => b.zoek.test(a.naam) && !b.niet.test(a.naam) && !GEEN.test(a.naam) && goedeMaat(a) && a.voorraad !== false)
+                           .sort((x, y) => x.nl - y.nl);
+    const q = encodeURIComponent("Charlotte Tilbury " + b.naam.replace(/\(.*\)/, "").trim());
+    const zelf = ZELF_KIJKEN.map(([n, s, f]) => `<a href="${f(q)}" target="_blank" rel="noopener"${s === "rijden" ? ' title="Levert mogelijk niet naar Nederland: ophalen of naar een pakketpunt over de grens laten sturen"' : ""}>${n}${s === "rijden" ? " 🚗" : ""} ↗</a>`).join("");
+    if (!treffers.length) return `<div class="kaart"><div class="prod"><div>
+        <h3>${esc(b.naam)}</h3><div class="winkel">Nu bij geen van de automatische winkels gevonden.</div>
+        <div class="zelf">${zelf}</div></div></div></div>`;
+    const t = treffers[0];
+    const rest = treffers.slice(1, 8).map(a => `<div class="rij"><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.winkel)} · ${esc(kortNaam(a.naam))}</a><span class="r">${prijsRegel(a)}</span></div>`).join("");
+    return `<div class="kaart"><div class="prod">
+      ${t.img ? `<img src="${esc(t.img)}" alt="" loading="lazy">` : ""}
+      <div style="flex:1;min-width:0">
+        <h3>${esc(b.naam)}</h3>
+        <div class="beste"><span class="prijs">${euro(t.eur)}</span>${t.was ? `<span class="was">${euro(t.was)}</span><span class="korting">−${t.korting}%</span>` : ""}</div>
+        <div class="winkel">Goedkoopst bij <b>${esc(t.winkel)}</b>${t.eu ? "" : " · let op: + btw/invoerkosten (± " + euro(t.nl) + ")"} · ${esc(kortNaam(t.naam))}</div>
+        <a class="knop" href="${esc(t.url)}" target="_blank" rel="noopener">Bekijk bij ${esc(t.winkel)}</a>
+        ${rest ? `<details><summary>Ook bij ${treffers.length - 1} andere aanbieding(en)</summary>${rest}</details>` : ""}
+        <details><summary>Zelf kijken bij andere winkels</summary><div class="zelf">${zelf}</div></details>
+      </div></div></div>`;
+  }).join("");
+  document.getElementById("vergelijk").innerHTML =
+    `<p class="info">Per product de laagste prijs die nu gevonden is. Let op: de inhoud (ml/gram) of kleur kan per winkel verschillen.</p>` + html;
+}
+
+function toonAlles(){
+  const q = document.getElementById("zoek").value.trim().toLowerCase();
+  const eu = document.getElementById("alleenEU").checked;
+  const kort = document.getElementById("alleenKorting").checked;
+  const sort = document.getElementById("sorteer").value;
+  let l = AANBOD.filter(a => (!q || a.naam.toLowerCase().includes(q)) && (!eu || a.eu) && (!kort || a.korting > 0));
+  l.sort(sort === "laag" ? (x, y) => x.nl - y.nl : sort === "hoog" ? (x, y) => y.nl - x.nl
+         : (x, y) => (y.korting - x.korting) || (x.nl - y.nl));
+  document.getElementById("lijst").innerHTML = l.length ? l.slice(0, 300).map(a => `<div class="kaart">
+      ${a.img ? `<img src="${esc(a.img)}" alt="" loading="lazy">` : ""}
+      <h3>${esc(kortNaam(a.naam))}</h3>
+      <div class="beste"><span class="prijs" style="font-size:18px">${euro(a.eur)}</span>${a.was ? `<span class="was">${euro(a.was)}</span><span class="korting">−${a.korting}%</span>` : ""}</div>
+      <div class="winkel">${esc(a.winkel)}${a.eu ? "" : ` <span class="extra">+ invoerkosten</span>`}</div>
+      <a class="knop" href="${esc(a.url)}" target="_blank" rel="noopener">Bekijk</a></div>`).join("")
+    : `<div class="leeg">Niets gevonden.</div>`;
+}
+
+function toonWinkels(){
+  const rijen = Object.values(DATA.winkels).map(w => `<tr><td><b>${esc(w.naam)}</b> (${esc(w.land)})<br>
+      ${w.items.length} producten · bijgewerkt ${w.bijgewerkt ? new Date(w.bijgewerkt).toLocaleString("nl-NL",{dateStyle:"short",timeStyle:"short"}) : "nog nooit"}
+      ${w.fout ? `<br><span class="fout">Laatste keer ophalen mislukt, dit zijn de vorige prijzen.</span>` : ""}</td>
+      <td>${esc(w.levering || "")}${w.eu ? "" : " Buiten de EU kost bestellen vaak 21% btw plus inklaringskosten."}</td></tr>`).join("");
+  document.getElementById("winkels").innerHTML = `<div class="kaart info"><h2>Winkels die automatisch worden bijgehouden</h2>
+    <table>${rijen}</table></div>
+    <div class="kaart info"><h2>Winkels om zelf te checken</h2>
+    Douglas, ICI Paris XL, de Bijenkorf, bol, Zalando en Lookfantastic laten automatisch ophalen niet toe.
+    Bij elk product op "Bestsellers vergelijken" staan knoppen om daar meteen te zoeken.<br><br>
+    Winkels met 🚗 (Douglas België/Duitsland, Sephora Duitsland, Niche Beauty) leveren niet altijd in Nederland.
+    Dan kun je het ophalen in de winkel of laten sturen naar een pakketpunt net over de grens.</div>
+    <div class="kaart info"><h2>Goed om te weten</h2>
+    Prijzen in ponden en dollars zijn omgerekend met de wisselkoers van de ECB. Verzendkosten staan er niet bij: die verschillen per winkel en vervallen vaak boven een bepaald bedrag.
+    Bestel je buiten de EU (VS, VK), dan betaal je in Nederland 21% btw en meestal ook inklaringskosten van de vervoerder.</div>`;
+}
+
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", x === t));
+  ["vergelijk", "alles", "winkels"].forEach(id => document.getElementById(id).hidden = id !== t.dataset.tab);
+});
+["zoek", "alleenEU", "alleenKorting", "sorteer"].forEach(id => document.getElementById(id).addEventListener("input", toonAlles));
+
+fetch("data.json", {cache: "no-store"}).then(r => r.json()).then(d => {
+  DATA = d; AANBOD = bereken(d);
+  document.getElementById("tijd").textContent = "Bijgewerkt: " +
+    new Date(d.bijgewerkt).toLocaleString("nl-NL", {weekday:"short", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}) + ".";
+  toonVergelijk(); toonAlles(); toonWinkels();
+}).catch(() => {
+  document.getElementById("vergelijk").innerHTML = `<div class="leeg">De prijzen konden niet geladen worden. Probeer het later opnieuw.</div>`;
+});
+</script>
+</body>
+</html>
