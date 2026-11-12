@@ -5,93 +5,209 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glow Deals</title>
 <meta name="description" content="De laagste prijzen voor Charlotte Tilbury make-up, te bestellen naar Nederland.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Geist:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#fbf6f4;--kaart:#ffffff;--tekst:#2b1f22;--zacht:#7a6468;--lijn:#eadcd9;
-  --accent:#b4536a;--accent-zacht:#f6e3e7;--goed:#2f7d4f;--goed-zacht:#e3f2e8;--let:#9a6a12;--let-zacht:#fbf0d9;
+/* Hallmark · shape: app screen · genre: editorial · theme: Studio (deal 1/3, seed price-comparison-beauty-brand-cf71·1102ec80·2026-11-12·r0) · redesign: full
+ * nav: a tab row under the wordmark, kept · signature: the price ledger, the cheapest price set large in Hedvig with every other shop ruled beneath it · states: loading, empty, error, full
+ * axes: light/roman-serif/warm · posture: restrained · contrast: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H5 E4 S4 R4 V4 · weakest: P, a price list has little to argue; the argument is the order: cheapest first, set big, the rest ruled small beneath */
+/* Hallmark · dropped dark mode · the Studio ground is a cool light proof; one scheme */
+/* Hallmark · dropped "✨" and "🚗" · 30a names emoji as icons; the car became the words "ophalen over de grens" */
+@import url("./tokens.css");
+@import url("./base.css");
+
+:root { --container: 1040px; --shop-col: 7.5rem; }
+
+/* De kop: woordmerk op het proefvel (stippenraster), vervaagt naar het schone papier. */
+.mast { position: relative; isolation: isolate; padding-block: var(--space-xl) var(--space-lg); }
+.mast::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, var(--color-dot) 1px, transparent 1.4px); background-size: 24px 24px;
+  -webkit-mask-image: linear-gradient(to bottom, var(--color-ink) 50%, transparent); mask-image: linear-gradient(to bottom, var(--color-ink) 50%, transparent); }
+.mast h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; max-width: none; }
+.mast .guide { height: var(--rule-hair); background: var(--color-accent); margin-top: var(--space-xs); max-width: 22rem; }
+.mast p { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 46ch; }
+.mast .stand { margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); font-variant-numeric: tabular-nums; }
+
+/* Tabs: een gewone tabrij, scrollt opzij op smalle schermen. */
+.tabs { display: flex; gap: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-ink); overflow-x: auto; scrollbar-width: none; }
+.tab { appearance: none; background: none; border: 0; padding: var(--space-sm) 0; min-height: 44px; color: var(--color-muted); font-weight: 500; font-size: var(--text-md); white-space: nowrap; cursor: pointer;
+  box-shadow: inset 0 -2px 0 transparent; transition: color var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out); }
+.tab:hover { color: var(--color-ink); }
+.tab:active { color: var(--color-ink-2); }
+.tab:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -2px; }
+.tab[aria-selected="true"] { color: var(--color-ink); box-shadow: inset 0 -2px 0 var(--color-accent); }
+
+main { padding-block: var(--space-lg) var(--space-2xl); }
+.uitleg { color: var(--color-muted); font-size: var(--text-sm); margin-bottom: var(--space-md); }
+
+/* Het grootboek: per product één regel, de laagste prijs groot. */
+.product { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: var(--space-xs) var(--space-lg); align-items: start;
+  padding-block: var(--space-lg); border-top: var(--rule-hair) solid var(--color-ink); }
+.product + .product { border-top-color: var(--color-rule); }
+/* De snijtekens vallen in de kolomafstand, nooit over de tekst. */
+.foto { position: relative; width: 88px; height: 88px; margin-top: var(--space-xs); }
+.foto img { width: 100%; height: 100%; object-fit: contain; background: var(--color-paper-hi); border-radius: var(--radius-card); }
+.foto::before { content: ""; position: absolute; inset: calc(-1 * var(--space-xs)); pointer-events: none;
+  background:
+    linear-gradient(var(--color-mark), var(--color-mark)) 0 0 / 6px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 0 0 / 1px 6px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 100% 0 / 6px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 100% 0 / 1px 6px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 0 100% / 6px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 0 100% / 1px 6px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 100% 100% / 6px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 100% 100% / 1px 6px no-repeat; }
+.foto--leeg { background: var(--color-paper-2); border-radius: var(--radius-card); }
+.product h2 { font-size: var(--text-xl); line-height: 1.15; letter-spacing: -0.005em; max-width: none; }
+.waar { margin-top: var(--space-2xs); color: var(--color-ink-2); font-size: var(--text-sm); }
+.waar strong { font-weight: 500; color: var(--color-ink); }
+.let { color: var(--color-muted); }
+.prijs { text-align: right; font-variant-numeric: tabular-nums; }
+.prijs .bedrag { font-family: var(--font-display); font-size: var(--text-3xl); line-height: 1; letter-spacing: var(--tracking-display); color: var(--color-ink); white-space: nowrap; }
+.prijs .was { display: block; margin-top: var(--space-2xs); font-size: var(--text-sm); color: var(--color-muted); }
+.prijs .was s { text-decoration-thickness: 1px; }
+.acties { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); align-items: center; margin-top: var(--space-xs); }
+
+/* Knoppen: één gevulde actie per product, de rest typografisch. */
+.btn { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-md); border: var(--rule-hair) solid var(--color-ink); border-radius: 2px;
+  background: var(--color-accent); color: var(--color-accent-ink); font-weight: 500; font-size: var(--text-sm); text-decoration: none; cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-micro) var(--ease-out); }
+.btn::after { content: ""; position: absolute; inset: 2px; border: var(--rule-hair) solid var(--color-mark); border-radius: 1px; pointer-events: none; }
+.btn:hover { background: color-mix(in oklab, var(--color-accent) 86%, var(--color-ink)); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+details { grid-column: 2 / -1; }
+summary { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-ink-2); font-size: var(--text-sm); font-weight: 500; cursor: pointer;
+  text-decoration: underline; text-decoration-color: var(--color-rule); text-underline-offset: 0.2em; transition: text-decoration-color var(--dur-short) var(--ease-out); }
+summary:hover { text-decoration-color: var(--color-accent); }
+summary:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* De andere winkels: een kleine tabel, alleen horizontale lijnen. */
+.rest { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.rest td { padding: var(--space-xs) 0; border-top: var(--rule-hair) solid var(--color-rule); vertical-align: top; }
+.rest td:first-child { width: var(--shop-col); color: var(--color-ink); font-weight: 500; padding-right: var(--space-sm); }
+.rest td:last-child { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; padding-left: var(--space-sm); }
+.rest a { color: var(--color-ink-2); text-decoration-color: var(--color-rule); }
+.rest a:hover { text-decoration-color: var(--color-accent); }
+
+.zelf { list-style: none; margin: 0; padding: 0; columns: 2 12rem; column-gap: var(--space-lg); font-size: var(--text-sm); }
+.zelf li { break-inside: avoid; padding-block: var(--space-2xs); }
+.zelf a { color: var(--color-ink); text-decoration-color: var(--color-rule); }
+.zelf a:hover { text-decoration-color: var(--color-accent); }
+.zelf .over { color: var(--color-muted); }
+.kop-klein { margin: var(--space-sm) 0 var(--space-2xs); font-size: var(--text-sm); color: var(--color-muted); font-weight: 500; }
+
+.btn:disabled, .tab:disabled, select:disabled, .veld:disabled, .vink input:disabled { opacity: 0.55; cursor: not-allowed; }
+a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* Alle aanbiedingen: zoekveld en filters boven een raster van producten. */
+.balk { display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center; margin-bottom: var(--space-lg); }
+.veld { flex: 1 1 18rem; min-height: 44px; padding: 0 var(--space-sm); border: var(--rule-hair) solid var(--color-muted); border-radius: var(--radius-card); background: var(--color-paper-hi); color: var(--color-ink); font-size: var(--text-md); }
+.veld::placeholder { color: var(--color-muted); }
+.veld:focus-visible, select:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -2px; }
+select { min-height: 44px; padding: 0 var(--space-sm); border: var(--rule-hair) solid var(--color-muted); border-radius: var(--radius-card); background: var(--color-paper-hi); color: var(--color-ink); font-size: var(--text-sm); cursor: pointer; }
+.vink { display: inline-flex; align-items: center; gap: var(--space-xs); min-height: 44px; font-size: var(--text-sm); color: var(--color-ink-2); cursor: pointer; }
+.vink input { width: 18px; height: 18px; margin: 0; accent-color: var(--color-ink); cursor: pointer; }
+.vink input:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); gap: var(--space-xl) var(--space-lg); }
+.tegel { display: flex; flex-direction: column; gap: var(--space-xs); border-top: var(--rule-hair) solid var(--color-ink); padding-top: var(--space-md); }
+.tegel .foto { width: auto; height: 180px; margin: var(--space-xs); margin-bottom: var(--space-sm); }
+.tegel h2 { font-size: var(--text-lg); line-height: 1.2; letter-spacing: -0.005em; flex: 1; max-width: none; }
+.tegel .regel { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-sm); }
+.tegel .bedrag { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1; font-variant-numeric: tabular-nums; }
+.tegel .was { font-size: var(--text-sm); color: var(--color-muted); }
+.tegel .winkel { font-size: var(--text-sm); color: var(--color-ink-2); }
+.tegel a.naam { color: inherit; text-decoration: none; }
+.tegel a.naam:hover h2 { text-decoration: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: 1px; }
+
+/* Winkels & kosten */
+.tekst { max-width: 62ch; }
+.tekst h2 { font-size: var(--text-2xl); margin: var(--space-xl) 0 var(--space-sm); }
+.tekst h2:first-child { margin-top: 0; }
+.tekst p { color: var(--color-ink-2); }
+.tekst p + p { margin-top: var(--space-sm); }
+.winkels { width: 100%; border-collapse: collapse; margin-top: var(--space-sm); font-size: var(--text-sm); }
+.winkels th { text-align: left; font-weight: 500; color: var(--color-muted); padding: var(--space-xs) var(--space-sm) var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-ink); white-space: nowrap; }
+.winkels td { padding: var(--space-sm) var(--space-sm) var(--space-sm) 0; border-bottom: var(--rule-hair) solid var(--color-rule); vertical-align: top; color: var(--color-ink-2); }
+.winkels td:first-child { color: var(--color-ink); font-weight: 500; }
+.winkels .num { white-space: nowrap; }
+.fout { color: var(--color-error); }
+
+/* Laden, leeg en fout */
+.laden .product { opacity: 1; }
+.blok { display: block; background: var(--color-paper-2); border-radius: var(--radius-card); }
+.status { padding: var(--space-2xl) 0; color: var(--color-ink-2); border-top: var(--rule-hair) solid var(--color-ink); }
+
+footer { padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule); color: var(--color-muted); font-size: var(--text-sm); }
+footer p + p { margin-top: var(--space-xs); }
+
+@media (max-width: 40rem) {
+  .product { grid-template-columns: 64px minmax(0, 1fr); column-gap: var(--space-md); }
+  .foto { width: 64px; height: 64px; }
+  .prijs { grid-column: 2; text-align: left; }
+  .acties, details { grid-column: 1 / -1; }
+  .product h2 { font-size: var(--text-lg); }
+  .winkels thead { display: none; }
+  .winkels tr { display: block; padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .winkels td { display: block; border: 0; padding: var(--space-3xs) 0; }
 }
-@media (prefers-color-scheme:dark){:root{
-  --bg:#1a1416;--kaart:#241c1f;--tekst:#f3e9ea;--zacht:#b7a3a7;--lijn:#3a2e32;
-  --accent:#e58ba0;--accent-zacht:#3a2229;--goed:#6fcf95;--goed-zacht:#1d3326;--let:#e9bc63;--let-zacht:#3a2f17;
-}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tekst);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{padding:28px 16px 8px;max-width:1000px;margin:0 auto}
-h1{margin:0;font:600 30px/1.1 Georgia,"Times New Roman",serif;letter-spacing:.3px}
-h1 span{color:var(--accent)}
-.sub{color:var(--zacht);margin:6px 0 0;font-size:15px}
-main{max-width:1000px;margin:0 auto;padding:0 16px 40px}
-.tabs{display:flex;gap:8px;margin:18px 0 14px;overflow-x:auto}
-.tab{border:1px solid var(--lijn);background:var(--kaart);color:var(--tekst);padding:9px 16px;border-radius:999px;font:inherit;font-size:15px;cursor:pointer;white-space:nowrap}
-.tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
-.zoek{width:100%;padding:12px 14px;border:1px solid var(--lijn);border-radius:12px;background:var(--kaart);color:var(--tekst);font:inherit;margin-bottom:10px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:14px;color:var(--zacht)}
-.filters label{display:flex;align-items:center;gap:6px;background:var(--kaart);border:1px solid var(--lijn);padding:6px 10px;border-radius:999px;cursor:pointer}
-select{font:inherit;font-size:14px;padding:6px 10px;border-radius:999px;border:1px solid var(--lijn);background:var(--kaart);color:var(--tekst)}
-.kaart{background:var(--kaart);border:1px solid var(--lijn);border-radius:16px;padding:14px;margin-bottom:12px}
-.prod{display:flex;gap:12px;align-items:flex-start}
-.prod img{width:72px;height:72px;object-fit:contain;border-radius:10px;background:#fff;flex:none}
-.prod h3{margin:0 0 4px;font-size:16px;font-weight:600}
-.beste{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.prijs{font-size:22px;font-weight:700}
-.was{color:var(--zacht);text-decoration:line-through;font-size:14px}
-.korting{background:var(--goed-zacht);color:var(--goed);font-weight:600;font-size:13px;padding:2px 8px;border-radius:999px}
-.winkel{color:var(--zacht);font-size:14px}
-.knop{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:8px 14px;border-radius:10px;font-weight:600;font-size:14px;margin-top:8px}
-.rij{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--lijn);font-size:14px}
-.rij a{color:var(--tekst)}
-.rij .r{text-align:right;white-space:nowrap}
-.extra{color:var(--let);background:var(--let-zacht);font-size:12px;padding:1px 7px;border-radius:999px;margin-left:4px}
-.zelf{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.zelf a{font-size:13px;color:var(--accent);background:var(--accent-zacht);padding:4px 10px;border-radius:999px;text-decoration:none}
-details summary{cursor:pointer;color:var(--zacht);font-size:14px;margin-top:6px}
-.lijst{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
-.lijst .kaart{margin:0;display:flex;flex-direction:column}
-.lijst img{width:100%;height:150px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:8px}
-.lijst h3{font-size:14px;font-weight:600;margin:0 0 6px;flex:1}
-.info{font-size:14px;color:var(--zacht)}
-.info h2{color:var(--tekst);font-size:18px;margin:0 0 6px}
-.info table{width:100%;border-collapse:collapse;margin-top:6px}
-.info td{padding:6px 0;border-top:1px solid var(--lijn);vertical-align:top}
-.fout{color:var(--let)}
-footer{max-width:1000px;margin:0 auto;padding:0 16px 30px;color:var(--zacht);font-size:12px}
-.leeg{color:var(--zacht);text-align:center;padding:30px}
 </style>
 </head>
 <body>
-<header>
-  <h1>Glow <span>Deals</span> ✨</h1>
-  <p class="sub">De laagste prijzen voor Charlotte Tilbury, te bestellen naar Nederland. <span id="tijd"></span></p>
-</header>
-<main>
-  <div class="tabs" role="tablist">
-    <button class="tab" role="tab" aria-selected="true" data-tab="vergelijk">Bestsellers vergelijken</button>
-    <button class="tab" role="tab" aria-selected="false" data-tab="alles">Alle aanbiedingen</button>
-    <button class="tab" role="tab" aria-selected="false" data-tab="winkels">Winkels &amp; kosten</button>
+<header class="mast">
+  <div class="container">
+    <h1>Glow Deals</h1>
+    <div class="guide" aria-hidden="true"></div>
+    <p>De laagste prijzen voor Charlotte Tilbury, te bestellen naar Nederland.</p>
+    <p class="stand" id="tijd"></p>
   </div>
+</header>
 
-  <section id="vergelijk"></section>
+<div class="container">
+  <div class="tabs" role="tablist" aria-label="Weergave">
+    <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="vergelijk" data-tab="vergelijk">Bestsellers vergelijken</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="alles" data-tab="alles">Alle aanbiedingen</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="winkels" data-tab="winkels">Winkels &amp; kosten</button>
+  </div>
+</div>
 
-  <section id="alles" hidden>
-    <input class="zoek" id="zoek" type="search" placeholder="Zoek, bv. pillow talk, magic cream, blush…">
-    <div class="filters">
-      <select id="sorteer">
+<main class="container">
+  <section id="vergelijk" role="tabpanel" aria-label="Bestsellers vergelijken">
+    <div class="laden" aria-busy="true" aria-label="Prijzen laden">
+      <div class="product"><span class="blok" style="width:88px;height:88px"></span><span><span class="blok" style="height:1.4rem;width:60%"></span><span class="blok" style="height:0.9rem;width:40%;margin-top:8px"></span></span><span class="blok" style="height:2rem;width:5rem"></span></div>
+      <div class="product"><span class="blok" style="width:88px;height:88px"></span><span><span class="blok" style="height:1.4rem;width:50%"></span><span class="blok" style="height:0.9rem;width:35%;margin-top:8px"></span></span><span class="blok" style="height:2rem;width:5rem"></span></div>
+    </div>
+    <noscript><p class="status">Deze pagina heeft JavaScript nodig om de prijzen te tonen.</p></noscript>
+  </section>
+
+  <section id="alles" role="tabpanel" aria-label="Alle aanbiedingen" hidden>
+    <div class="balk">
+      <label class="visually-hidden" for="zoek">Zoeken</label>
+      <input class="veld" id="zoek" type="search" name="zoek" autocomplete="off" placeholder="Zoek, bv. pillow talk, magic cream, blush">
+      <label class="visually-hidden" for="sorteer">Sorteren</label>
+      <select id="sorteer" name="sorteer">
         <option value="korting">Grootste korting eerst</option>
         <option value="laag">Laagste prijs eerst</option>
         <option value="hoog">Hoogste prijs eerst</option>
       </select>
-      <label><input type="checkbox" id="alleenEU" checked> Alleen EU (geen invoerkosten)</label>
-      <label><input type="checkbox" id="alleenKorting"> Alleen met korting</label>
+      <label class="vink"><input type="checkbox" id="alleenEU" checked> Alleen EU (geen invoerkosten)</label>
+      <label class="vink"><input type="checkbox" id="alleenKorting"> Alleen met korting</label>
     </div>
-    <div class="lijst" id="lijst"></div>
+    <div class="raster" id="lijst"></div>
   </section>
 
-  <section id="winkels" hidden></section>
+  <section id="winkels" role="tabpanel" aria-label="Winkels en kosten" hidden></section>
 </main>
+
 <footer>
-  Prijzen worden elke dag automatisch opgehaald en kunnen intussen veranderd zijn: controleer de prijs altijd in de winkel zelf.
-  Deze site is niet verbonden aan Charlotte Tilbury of aan de genoemde winkels.
+  <div class="container">
+    <p>Prijzen worden elke dag automatisch opgehaald en kunnen intussen veranderd zijn: controleer de prijs altijd in de winkel zelf.</p>
+    <p>Deze site is niet verbonden aan Charlotte Tilbury of aan de genoemde winkels.</p>
+  </div>
 </footer>
 
 <script>
@@ -144,6 +260,7 @@ let DATA = null, AANBOD = [];
 const euro = n => "€ " + n.toFixed(2).replace(".", ",");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const kortNaam = s => s.replace(/^charlotte tilbury,?\s*/i, "");
+const nieuwVenster = 'target="_blank" rel="noopener"';
 
 function bereken(d){
   const uit = [];
@@ -160,9 +277,16 @@ function bereken(d){
   return uit;
 }
 
-function prijsRegel(a){
-  const extra = a.eu ? "" : `<span class="extra" title="Buiten de EU: 21% btw en mogelijk inklaringskosten komen erbij">+ invoerkosten</span>`;
-  return `${euro(a.eur)}${extra}`;
+function foto(src, klas = "foto"){
+  return src ? `<div class="${klas}"><img src="${esc(src)}" alt="" loading="lazy" width="300" height="300"></div>`
+             : `<div class="${klas} foto--leeg" aria-hidden="true"></div>`;
+}
+
+function zelfKijken(q){
+  const lijst = soort => ZELF_KIJKEN.filter(z => z[1] === soort)
+    .map(([n, , f]) => `<li><a href="${f(q)}" ${nieuwVenster}>${n}</a></li>`).join("");
+  return `<p class="kop-klein">Levert in Nederland</p><ul class="zelf">${lijst("nl")}</ul>
+    <p class="kop-klein">Ophalen over de grens (levert niet altijd in Nederland)</p><ul class="zelf">${lijst("rijden")}</ul>`;
 }
 
 function toonVergelijk(){
@@ -172,25 +296,27 @@ function toonVergelijk(){
     const treffers = AANBOD.filter(a => b.zoek.test(a.naam) && !b.niet.test(a.naam) && !GEEN.test(a.naam) && goedeMaat(a) && a.voorraad !== false)
                            .sort((x, y) => x.nl - y.nl);
     const q = encodeURIComponent("Charlotte Tilbury " + b.naam.replace(/\(.*\)/, "").trim());
-    const zelf = ZELF_KIJKEN.map(([n, s, f]) => `<a href="${f(q)}" target="_blank" rel="noopener"${s === "rijden" ? ' title="Levert mogelijk niet naar Nederland: ophalen of naar een pakketpunt over de grens laten sturen"' : ""}>${n}${s === "rijden" ? " 🚗" : ""} ↗</a>`).join("");
-    if (!treffers.length) return `<div class="kaart"><div class="prod"><div>
-        <h3>${esc(b.naam)}</h3><div class="winkel">Nu bij geen van de automatische winkels gevonden.</div>
-        <div class="zelf">${zelf}</div></div></div></div>`;
+    const zelf = `<details><summary>Zelf kijken bij andere winkels</summary>${zelfKijken(q)}</details>`;
+    if (!treffers.length) return `<article class="product">${foto(null)}
+        <div><h2>${esc(b.naam)}</h2><p class="waar">Nu bij geen van de automatische winkels gevonden.</p></div>
+        <div class="prijs"></div>${zelf}</article>`;
     const t = treffers[0];
-    const rest = treffers.slice(1, 8).map(a => `<div class="rij"><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.winkel)} · ${esc(kortNaam(a.naam))}</a><span class="r">${prijsRegel(a)}</span></div>`).join("");
-    return `<div class="kaart"><div class="prod">
-      ${t.img ? `<img src="${esc(t.img)}" alt="" loading="lazy">` : ""}
-      <div style="flex:1;min-width:0">
-        <h3>${esc(b.naam)}</h3>
-        <div class="beste"><span class="prijs">${euro(t.eur)}</span>${t.was ? `<span class="was">${euro(t.was)}</span><span class="korting">−${t.korting}%</span>` : ""}</div>
-        <div class="winkel">Goedkoopst bij <b>${esc(t.winkel)}</b>${t.eu ? "" : " · let op: + btw/invoerkosten (± " + euro(t.nl) + ")"} · ${esc(kortNaam(t.naam))}</div>
-        <a class="knop" href="${esc(t.url)}" target="_blank" rel="noopener">Bekijk bij ${esc(t.winkel)}</a>
-        ${rest ? `<details><summary>Ook bij ${treffers.length - 1} andere aanbieding(en)</summary>${rest}</details>` : ""}
-        <details><summary>Zelf kijken bij andere winkels</summary><div class="zelf">${zelf}</div></details>
-      </div></div></div>`;
+    const rest = treffers.slice(1, 8).map(a => `<tr><td>${esc(a.winkel)}</td>
+        <td><a href="${esc(a.url)}" ${nieuwVenster}>${esc(kortNaam(a.naam))}</a></td>
+        <td>${euro(a.eur)}${a.eu ? "" : `<br><span class="let">+ invoerkosten</span>`}</td></tr>`).join("");
+    return `<article class="product">${foto(t.img)}
+      <div>
+        <h2>${esc(b.naam)}</h2>
+        <p class="waar">Goedkoopst bij <strong>${esc(t.winkel)}</strong>: ${esc(kortNaam(t.naam))}</p>
+        ${t.eu ? "" : `<p class="waar let">Let op: buiten de EU komen btw en invoerkosten erbij, samen ongeveer ${euro(t.nl)}.</p>`}
+      </div>
+      <div class="prijs"><span class="bedrag">${euro(t.eur)}</span>${t.was ? `<span class="was"><s>${euro(t.was)}</s>, ${t.korting}% korting</span>` : ""}</div>
+      <div class="acties"><a class="btn" href="${esc(t.url)}" ${nieuwVenster}>Bekijk bij ${esc(t.winkel)}</a></div>
+      ${rest ? `<details><summary>Ook bij ${treffers.length - 1} andere aanbieding(en)</summary><table class="rest"><tbody>${rest}</tbody></table></details>` : ""}
+      ${zelf}</article>`;
   }).join("");
   document.getElementById("vergelijk").innerHTML =
-    `<p class="info">Per product de laagste prijs die nu gevonden is. Let op: de inhoud (ml/gram) of kleur kan per winkel verschillen.</p>` + html;
+    `<p class="uitleg">Per product de laagste prijs die nu gevonden is. Let op: de inhoud (ml/gram) of kleur kan per winkel verschillen.</p>` + html;
 }
 
 function toonAlles(){
@@ -201,30 +327,30 @@ function toonAlles(){
   let l = AANBOD.filter(a => (!q || a.naam.toLowerCase().includes(q)) && (!eu || a.eu) && (!kort || a.korting > 0));
   l.sort(sort === "laag" ? (x, y) => x.nl - y.nl : sort === "hoog" ? (x, y) => y.nl - x.nl
          : (x, y) => (y.korting - x.korting) || (x.nl - y.nl));
-  document.getElementById("lijst").innerHTML = l.length ? l.slice(0, 300).map(a => `<div class="kaart">
-      ${a.img ? `<img src="${esc(a.img)}" alt="" loading="lazy">` : ""}
-      <h3>${esc(kortNaam(a.naam))}</h3>
-      <div class="beste"><span class="prijs" style="font-size:18px">${euro(a.eur)}</span>${a.was ? `<span class="was">${euro(a.was)}</span><span class="korting">−${a.korting}%</span>` : ""}</div>
-      <div class="winkel">${esc(a.winkel)}${a.eu ? "" : ` <span class="extra">+ invoerkosten</span>`}</div>
-      <a class="knop" href="${esc(a.url)}" target="_blank" rel="noopener">Bekijk</a></div>`).join("")
-    : `<div class="leeg">Niets gevonden.</div>`;
+  document.getElementById("lijst").innerHTML = l.length ? l.slice(0, 300).map(a => `<article class="tegel">
+      <a class="naam" href="${esc(a.url)}" ${nieuwVenster}>${foto(a.img)}<h2>${esc(kortNaam(a.naam))}</h2></a>
+      <div class="regel"><span class="bedrag">${euro(a.eur)}</span>${a.was ? `<span class="was"><s>${euro(a.was)}</s>, ${a.korting}% korting</span>` : ""}</div>
+      <p class="winkel">${esc(a.winkel)}${a.eu ? "" : `, plus invoerkosten`}</p></article>`).join("")
+    : `<p class="status">Niets gevonden. Probeer een ander woord, of zet "Alleen EU" uit.</p>`;
 }
 
 function toonWinkels(){
-  const rijen = Object.values(DATA.winkels).map(w => `<tr><td><b>${esc(w.naam)}</b> (${esc(w.land)})<br>
-      ${w.items.length} producten · bijgewerkt ${w.bijgewerkt ? new Date(w.bijgewerkt).toLocaleString("nl-NL",{dateStyle:"short",timeStyle:"short"}) : "nog nooit"}
+  const rijen = Object.values(DATA.winkels).map(w => `<tr><td>${esc(w.naam)} (${esc(w.land)})</td>
+      <td class="num">${w.items.length} producten<br>bijgewerkt ${w.bijgewerkt ? new Date(w.bijgewerkt).toLocaleString("nl-NL",{dateStyle:"short",timeStyle:"short"}) : "nog nooit"}
       ${w.fout ? `<br><span class="fout">Laatste keer ophalen mislukt, dit zijn de vorige prijzen.</span>` : ""}</td>
       <td>${esc(w.levering || "")}${w.eu ? "" : " Buiten de EU kost bestellen vaak 21% btw plus inklaringskosten."}</td></tr>`).join("");
-  document.getElementById("winkels").innerHTML = `<div class="kaart info"><h2>Winkels die automatisch worden bijgehouden</h2>
-    <table>${rijen}</table></div>
-    <div class="kaart info"><h2>Winkels om zelf te checken</h2>
-    Douglas, ICI Paris XL, de Bijenkorf, bol, Zalando en Lookfantastic laten automatisch ophalen niet toe.
-    Bij elk product op "Bestsellers vergelijken" staan knoppen om daar meteen te zoeken.<br><br>
-    Winkels met 🚗 (Douglas België/Duitsland, Sephora Duitsland, Niche Beauty) leveren niet altijd in Nederland.
-    Dan kun je het ophalen in de winkel of laten sturen naar een pakketpunt net over de grens.</div>
-    <div class="kaart info"><h2>Goed om te weten</h2>
-    Prijzen in ponden en dollars zijn omgerekend met de wisselkoers van de ECB. Verzendkosten staan er niet bij: die verschillen per winkel en vervallen vaak boven een bepaald bedrag.
-    Bestel je buiten de EU (VS, VK), dan betaal je in Nederland 21% btw en meestal ook inklaringskosten van de vervoerder.</div>`;
+  document.getElementById("winkels").innerHTML = `<div class="tekst">
+    <h2>Winkels die automatisch worden bijgehouden</h2></div>
+    <table class="winkels"><thead><tr><th>Winkel</th><th>Stand</th><th>Levering</th></tr></thead><tbody>${rijen}</tbody></table>
+    <div class="tekst">
+    <h2>Winkels om zelf te checken</h2>
+    <p>Douglas, ICI Paris XL, de Bijenkorf, bol, Zalando en Lookfantastic laten automatisch ophalen niet toe.
+    Bij elk product op "Bestsellers vergelijken" staan links om daar meteen te zoeken.</p>
+    <p>Douglas België en Duitsland, Sephora Duitsland en Niche Beauty leveren niet altijd in Nederland.
+    Dan kun je het ophalen in de winkel of laten sturen naar een pakketpunt net over de grens.</p>
+    <h2>Goed om te weten</h2>
+    <p>Prijzen in ponden en dollars zijn omgerekend met de wisselkoers van de ECB. Verzendkosten staan er niet bij: die verschillen per winkel en vervallen vaak boven een bepaald bedrag.</p>
+    <p>Bestel je buiten de EU (VS, VK), dan betaal je in Nederland 21% btw en meestal ook inklaringskosten van de vervoerder.</p></div>`;
 }
 
 document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
@@ -239,7 +365,7 @@ fetch("data.json", {cache: "no-store"}).then(r => r.json()).then(d => {
     new Date(d.bijgewerkt).toLocaleString("nl-NL", {weekday:"short", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}) + ".";
   toonVergelijk(); toonAlles(); toonWinkels();
 }).catch(() => {
-  document.getElementById("vergelijk").innerHTML = `<div class="leeg">De prijzen konden niet geladen worden. Probeer het later opnieuw.</div>`;
+  document.getElementById("vergelijk").innerHTML = `<p class="status">De prijzen konden niet geladen worden. Probeer het later opnieuw.</p>`;
 });
 </script>
 </body>
