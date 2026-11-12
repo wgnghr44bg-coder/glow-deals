@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Glow Deals</title>
+<title>Beauty Budget</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <meta name="description" content="De laagste prijzen voor Charlotte Tilbury make-up, te bestellen naar Nederland.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,10 @@
 .mast::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background-image: radial-gradient(circle at 1px 1px, var(--color-dot) 1px, transparent 1.4px); background-size: 24px 24px;
   -webkit-mask-image: linear-gradient(to bottom, var(--color-ink) 50%, transparent); mask-image: linear-gradient(to bottom, var(--color-ink) 50%, transparent); }
-.mast h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; max-width: none; }
+.merk { display: flex; align-items: center; gap: var(--space-md); }
+.merk h1 { flex: 1 1 auto; min-width: 0; }
+.logo { flex: none; width: clamp(2.5rem, 7vw, 3.75rem); height: auto; }
+.mast h1 { font-size: clamp(2.25rem, 9vw, 4.5rem); line-height: 1; max-width: none; }
 .mast .guide { height: var(--rule-hair); background: var(--color-accent); margin-top: var(--space-xs); max-width: 22rem; }
 .mast p { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 46ch; }
 .mast .stand { margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); font-variant-numeric: tabular-nums; }
@@ -160,7 +164,17 @@ footer p + p { margin-top: var(--space-xs); }
 <body>
 <header class="mast">
   <div class="container">
-    <h1>Glow Deals</h1>
+    <div class="merk">
+    <svg class="logo" viewBox="0 0 48 64" width="48" height="64" aria-hidden="true" focusable="false">
+      <circle cx="24" cy="22" r="18" fill="var(--color-paper-hi)" stroke="var(--color-ink)" stroke-width="2.5"/>
+      <circle cx="24" cy="22" r="13.5" fill="none" stroke="var(--color-ink)" stroke-width="1" opacity=".35"/>
+      <path d="M30 15.5a8 8 0 1 0 0 13" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M16.5 20h10M16.5 24.5h9" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M24 40v18" stroke="var(--color-ink)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="24" cy="40.5" r="3.5" fill="var(--color-ink)"/>
+    </svg>
+    <h1>Beauty Budget</h1>
+    </div>
     <div class="guide" aria-hidden="true"></div>
     <p>De laagste prijzen voor Charlotte Tilbury, te bestellen naar Nederland.</p>
     <p class="stand" id="tijd"></p>

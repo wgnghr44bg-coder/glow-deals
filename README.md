@@ -1,4 +1,4 @@
-# Glow Deals
+# Beauty Budget (Glow Deals)
 
 Site met de laagste prijzen voor Charlotte Tilbury make-up bij winkels die naar Nederland leveren.
 
