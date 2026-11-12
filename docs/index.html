@@ -20,24 +20,31 @@
 
 :root { --container: 1200px; }
 
-/* De kop van de eigenaar: donker met rosé-goud */
-:root { --kop-donker: #171318; --kop-midden: #292027; --kop-rose: #DDA397; --kop-rose-licht: #E8B6A9; --kop-rose-1: #F5D2C7; --kop-rose-2: #C8877B; --kop-rose-3: #F8D8CE; --kop-tekst: #ffffff;
-  --font-kop: Georgia, serif; }
-.beauty-header { background: linear-gradient(120deg, var(--kop-donker), var(--kop-midden), var(--kop-donker)); color: var(--kop-tekst); padding: 28px 6%; position: relative; overflow: clip; }
-.beauty-header::after { content: ""; position: absolute; width: 350px; height: 350px; border: 1px solid color-mix(in srgb, var(--kop-rose) 25%, transparent); border-radius: 50%; right: -150px; top: -220px; pointer-events: none; }
-.header-content { max-width: 1250px; margin: auto; display: flex; align-items: center; gap: 20px; color: inherit; text-decoration: none; }
-.header-content:focus-visible { outline: 2px solid var(--kop-rose); outline-offset: 4px; }
-.logo-icon { width: 65px; height: 65px; border: 2px solid var(--kop-rose); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--kop-rose-licht); font-size: 32px; flex-shrink: 0; }
-.logo-text { font-family: var(--font-kop); font-size: clamp(32px, 6vw, 58px); font-weight: bold; letter-spacing: -1.5px; margin: 0; max-width: none; line-height: 1.05; color: var(--kop-tekst); }
-.logo-text span { background: linear-gradient(90deg, var(--kop-rose-1), var(--kop-rose-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.tagline { color: var(--kop-rose); font-size: 11px; letter-spacing: 3px; margin-top: 8px; }
-.logo-line { width: 100%; height: 2px; margin-top: 18px; background: linear-gradient(90deg, transparent, var(--kop-rose), var(--kop-rose-3), transparent); }
-@media (max-width: 480px) {
-  .beauty-header { padding: 24px 18px; }
-  .header-content { gap: 13px; }
-  .logo-icon { width: 48px; height: 48px; font-size: 24px; }
-  .logo-text { font-size: 34px; }
-  .tagline { font-size: 8px; letter-spacing: 1.5px; }
+/* De kop van de eigenaar: zwart, met lichtbundel, draaiende cirkels en glanzende titel */
+:root { --hero-bg: #050505; --hero-tekst: #ffffff; --hero-grijs: #aaaaaa; --hero-licht: #cccccc; --hero-donker: #777777;
+  --hero-glans: rgba(255,255,255,.12); --hero-ring: rgba(255,255,255,.12); --font-hero: Arial, sans-serif; }
+.bb-hero { position: relative; overflow: hidden; background: var(--hero-bg); color: var(--hero-tekst); padding: 55px 15px; text-align: center; font-family: var(--font-hero); }
+/* Bewegende lichtbundel */
+.bb-hero::before { content: ""; position: absolute; inset: -100%; background: linear-gradient(115deg, transparent 45%, var(--hero-glans) 50%, transparent 55%); animation: sweep 7s linear infinite; pointer-events: none; }
+/* Bewegende cirkels */
+.bb-orbit { position: absolute; width: 260px; height: 260px; border: 1px solid var(--hero-ring); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: orbit 15s linear infinite; pointer-events: none; }
+.bb-orbit.two { width: 360px; height: 360px; animation-direction: reverse; }
+.bb-content { position: relative; z-index: 2; }
+.bb-eyebrow { font-size: 10px; letter-spacing: 5px; color: var(--hero-grijs); animation: fadeIn 2s ease both; }
+.bb-title { font-family: var(--font-hero); font-size: clamp(32px, 7vw, 65px); font-weight: 900; letter-spacing: 3px; line-height: 1.1; margin: 20px auto 12px; max-width: none;
+  background: linear-gradient(90deg, var(--hero-donker), var(--hero-tekst), var(--hero-grijs), var(--hero-tekst)); background-size: 300% auto; color: transparent; background-clip: text; -webkit-background-clip: text; animation: shine 5s linear infinite; }
+.bb-line { width: 0; height: 1px; background: var(--hero-tekst); margin: 20px auto; animation: expand 2s ease forwards; }
+.bb-subtitle { color: var(--hero-licht); font-size: 11px; letter-spacing: 3px; animation: fadeIn 3s ease both; }
+.bb-bottom { margin-top: 35px; font-size: 10px; letter-spacing: 3px; animation: pulse 3s ease-in-out infinite; }
+@keyframes sweep { from { transform: translateX(-40%) rotate(0deg); } to { transform: translateX(40%) rotate(0deg); } }
+@keyframes orbit { to { rotate: 360deg; } }
+@keyframes shine { to { background-position: 300% center; } }
+@keyframes expand { to { width: 100px; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) {
+  .bb-hero *, .bb-hero::before { animation: none !important; }
+  .bb-line { width: 100px; } /* zonder animatie blijft de lijn anders onzichtbaar */
 }
 .banner .stand { margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); }
 .kop { position: sticky; top: 0; z-index: var(--z-sticky); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-rule); }
@@ -157,15 +164,16 @@ footer p + p { margin-top: var(--space-xs); }
 </style>
 </head>
 <body>
-<header class="beauty-header">
-  <a class="header-content" href="./" aria-label="Beauty Budget, naar het begin">
-    <div class="logo-icon" aria-hidden="true">✧</div>
-    <div>
-      <h1 class="logo-text">Beauty <span>Budget</span></h1>
-      <div class="tagline">BEAUTY • LUXURY • SMART SHOPPING</div>
-    </div>
-  </a>
-  <div class="logo-line" aria-hidden="true"></div>
+<header class="bb-hero">
+  <div class="bb-orbit" aria-hidden="true"></div>
+  <div class="bb-orbit two" aria-hidden="true"></div>
+  <div class="bb-content">
+    <div class="bb-eyebrow">THE BEAUTY DESTINATION</div>
+    <h1 class="bb-title">BEAUTY BUDGET</h1>
+    <div class="bb-line" aria-hidden="true"></div>
+    <div class="bb-subtitle">DISCOVER • COMPARE • SAVE</div>
+    <div class="bb-bottom">YOUR BEAUTY. YOUR RULES.</div>
+  </div>
 </header>
 
 <div class="kop">
