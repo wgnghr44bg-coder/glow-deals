@@ -1,8 +1,8 @@
 {
- "bijgewerkt": "2026-11-26T07:00+00:00",
+ "bijgewerkt": "2026-11-26T17:00+00:00",
  "koersen": {
-  "GBP": 1.1943150603129105,
-  "USD": 0.9144947416552356,
+  "GBP": 1.1939585696376336,
+  "USD": 0.9111617312072894,
   "EUR": 1.0
  },
  "winkels": {
@@ -215,7 +215,7 @@
    "eu": true,
    "levering": "Levert in Nederland (vanuit Duitsland).",
    "home": "https://www.breuninger.com/nl/merken/charlotte-tilbury/",
-   "bijgewerkt": "2026-11-26T07:00+00:00",
+   "bijgewerkt": "2026-11-26T17:00+00:00",
    "fout": null,
    "items": [
     {
@@ -386,7 +386,7 @@
    "eu": true,
    "levering": "Levert in Nederland via de Nederlandse webshop, prijzen in euro.",
    "home": "https://www.spacenk.com/nl/merken/c/charlotte-tilbury",
-   "bijgewerkt": "2026-11-26T07:00+00:00",
+   "bijgewerkt": "2026-11-26T17:00+00:00",
    "fout": null,
    "items": [
     {
@@ -1588,7 +1588,7 @@
    "levering": "Niet elk product wordt naar Nederland verstuurd: Amazon laat dit zien bij het product. Invoerkosten worden bij het afrekenen bijgeteld.",
    "home": "https://www.amazon.com/s?k=charlotte+tilbury&rh=p_89%3ACharlotte+Tilbury",
    "bijgewerkt": "2026-11-26T07:00+00:00",
-   "fout": null,
+   "fout": "geen producten gevonden",
    "items": [
     {
      "naam": "Charlotte Tilbury Lip Lustre Hydrating Lip Gloss - High Shine Non-Sticky Formula with Lotus Extract - Long Lasting Moistur...",
@@ -1616,7 +1616,7 @@
    "eu": true,
    "levering": "Levert in Nederland.",
    "home": "https://www.charlottetilbury.com/nl",
-   "bijgewerkt": "2026-11-26T07:00+00:00",
+   "bijgewerkt": "2026-11-26T17:00+00:00",
    "fout": null,
    "items": [
     {
@@ -2151,21 +2151,21 @@
      "voorraad": true
     },
     {
+     "naam": "Charlotte Tilbury New Mystery Beauty Icons L.o.v.e. Bag",
+     "prijs": 91.0,
+     "munt": "EUR",
+     "was": 182.0,
+     "url": "https://www.charlottetilbury.com/nl/product/mystery-box-black-friday",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/6Idr9to22DehVE9REi59vQ/fe46274cab54ba45e7eab2917ea5f383/Uk-blackfriday-lovebag-pdp-silhouette.jpg.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
      "naam": "Charlotte Tilbury Airbrush Flawless Blush Blur",
      "prijs": 34.5,
      "munt": "EUR",
      "was": 46.0,
      "url": "https://www.charlottetilbury.com/nl/product/airbrush-flawless-blush-blur-naughty-talk",
      "img": "https://images.ctfassets.net/wlke2cbybljx/6N386GumcQjMXl4w6Laqzh/6b4f87fdbf80338760ab3bb4dccc1d4d/NAUGHTY_TALK.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Hollywood Instant Look In A Palette",
-     "prijs": 51.75,
-     "munt": "EUR",
-     "was": 69.0,
-     "url": "https://www.charlottetilbury.com/nl/product/instant-look-in-a-palette-pretty-glowing-beauty",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/RYWhLsVbYJamUG3unBYJQ/1438e2f5494d4bbf5d33678c6ed3f499/INSTANT_LOOK_IN_A_PALETTE_-_PRETTY__GLOWING_BEAUTY_-_ICON_BABY-OPEN.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2313,6 +2313,15 @@
      "voorraad": true
     },
     {
+     "naam": "Charlotte Tilbury Hollywood Superstar Glow Kit",
+     "prijs": 24.0,
+     "munt": "EUR",
+     "was": 32.0,
+     "url": "https://www.charlottetilbury.com/nl/product/dreamy-superstar-glow-gift-set",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/6kA9PnN62NOQmXHCOn8la7/04952b777a50fb2cf1b4da8ad66a9396/Packshot_with_Products__HOLLYWOOD_SUPERSTAR_GLOW_KIT.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
      "naam": "Charlotte Tilbury Exagger-eyes Easy Eyeshadow Stick",
      "prijs": 26.25,
      "munt": "EUR",
@@ -2322,12 +2331,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Hollywood Superstar Glow Kit",
-     "prijs": 24.0,
+     "naam": "Charlotte Tilbury Hollywood Contour Wand",
+     "prijs": 31.5,
      "munt": "EUR",
-     "was": 32.0,
-     "url": "https://www.charlottetilbury.com/nl/product/dreamy-superstar-glow-gift-set",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/6kA9PnN62NOQmXHCOn8la7/04952b777a50fb2cf1b4da8ad66a9396/Packshot_with_Products__HOLLYWOOD_SUPERSTAR_GLOW_KIT.png?w=300&fm=jpg",
+     "was": 42.0,
+     "url": "https://www.charlottetilbury.com/nl/product/hollywood-contour-wand-fair",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/1A8Tm1HP1bCkNjJ3AuQK5i/d26225732d6d66374f232cacab087ac3/HCW-FAIR-LEGENDARY-PDP.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2376,12 +2385,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Hollywood Contour Wand",
-     "prijs": 31.5,
+     "naam": "Charlotte Tilbury Pillow Talk Makeup Bag",
+     "prijs": 30.75,
      "munt": "EUR",
-     "was": 42.0,
-     "url": "https://www.charlottetilbury.com/nl/product/hollywood-contour-wand-fair",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/1A8Tm1HP1bCkNjJ3AuQK5i/d26225732d6d66374f232cacab087ac3/HCW-FAIR-LEGENDARY-PDP.png?w=300&fm=jpg",
+     "was": 41.0,
+     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-makeup-bag",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/5JrMzRjt7US7C8nqmIAAYg/b92cd1c97db4bc8474d4ef8c7a4a872d/Pillow_Talk_Makeup_bag_Packshot.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2403,30 +2412,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Pillow Talk Makeup Bag",
-     "prijs": 30.75,
-     "munt": "EUR",
-     "was": 41.0,
-     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-makeup-bag",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/5JrMzRjt7US7C8nqmIAAYg/b92cd1c97db4bc8474d4ef8c7a4a872d/Pillow_Talk_Makeup_bag_Packshot.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
      "naam": "Charlotte Tilbury Hollywood Flawless Light Tricks Eye Palette",
      "prijs": 51.0,
      "munt": "EUR",
      "was": 68.0,
      "url": "https://www.charlottetilbury.com/nl/product/hollywood-flawless-light-tricks-eyeshadow-palette",
      "img": "https://images.ctfassets.net/wlke2cbybljx/64bS8LpD8jhHvFj6ItZAsQ/8f121a5aaaccd7cd0d9b406aef916b91/Open_Packshot_of__EWLPX12X1RGL_HOLLYWOOD_FLAWLESS_LIGHT_TRICKS_EYE_PALETTE.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Pillow Talk Love Effect Lipstick",
-     "prijs": 28.5,
-     "munt": "EUR",
-     "was": 38.0,
-     "url": "https://www.charlottetilbury.com/nl/product/k-i-s-s-i-n-g-naughty-talk",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/4Dg1MJD6QP3pg6rafht935/24f5825ab221c1e5c6c969bfcfb9889d/KISSING_Naughty_Talk_-_Packshot.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2439,12 +2430,30 @@
      "voorraad": true
     },
     {
+     "naam": "Charlotte Tilbury Pillow Talk Love Effect Lipstick",
+     "prijs": 28.5,
+     "munt": "EUR",
+     "was": 38.0,
+     "url": "https://www.charlottetilbury.com/nl/product/k-i-s-s-i-n-g-naughty-talk",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/4Dg1MJD6QP3pg6rafht935/24f5825ab221c1e5c6c969bfcfb9889d/KISSING_Naughty_Talk_-_Packshot.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
      "naam": "Charlotte Tilbury The Feline Flick",
      "prijs": 24.0,
      "munt": "EUR",
      "was": 32.0,
      "url": "https://www.charlottetilbury.com/nl/product/the-feline-flick-eyeliner-panther",
      "img": "https://images.ctfassets.net/wlke2cbybljx/53luDS0FRwKwiZmmlGhrLb/0cac1745de755287e1680e2acc8c1898/Black_THE_FELINE_FLICK-LID_OFF_Packshot.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Pillow Talk Push Up Lashes! Mascara 4ml",
+     "prijs": 13.5,
+     "munt": "EUR",
+     "was": 18.0,
+     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-push-up-lashes-mini-mascara",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/103SNbaes7mQsAfJlidLeh/d4d845f2d47b3d71c69c4e7fb9bdba52/PILLOW_TALK_MINI_MASCARA_OPEN.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2457,12 +2466,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Pillow Talk Push Up Lashes! Mascara 4ml",
-     "prijs": 13.5,
+     "naam": "Charlotte Tilbury Pillow Talk Blush Balm Lip Tint",
+     "prijs": 25.5,
      "munt": "EUR",
-     "was": 18.0,
-     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-push-up-lashes-mini-mascara",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/103SNbaes7mQsAfJlidLeh/d4d845f2d47b3d71c69c4e7fb9bdba52/PILLOW_TALK_MINI_MASCARA_OPEN.png?w=300&fm=jpg",
+     "was": 34.0,
+     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-blush-balm-lip-tint-blushed-rose",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/4CJfHqavRZ5va4JZDG6WWi/a423b9b990f24c00d7b82c43d46e3ae9/PT_Blush_Balm_-_Blushed_Rose_-_Open.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2484,12 +2493,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Pillow Talk Blush Balm Lip Tint",
-     "prijs": 25.5,
+     "naam": "Charlotte Tilbury Pillow Talk Eyeliner",
+     "prijs": 21.0,
      "munt": "EUR",
-     "was": 34.0,
-     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-blush-balm-lip-tint-blushed-rose",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/4CJfHqavRZ5va4JZDG6WWi/a423b9b990f24c00d7b82c43d46e3ae9/PT_Blush_Balm_-_Blushed_Rose_-_Open.png?w=300&fm=jpg",
+     "was": 28.0,
+     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-eyeliner",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/3x1xSOUCRFkumjdoulSVyZ/287b720c052884d60ca56dda7437bc78/Eyeliner-Pillowtalk-Open-Packshot.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2538,12 +2547,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Pillow Talk Eyeliner",
-     "prijs": 21.0,
+     "naam": "Charlotte Tilbury Charlotte's Iconic Magic Skin Duo",
+     "prijs": 78.75,
      "munt": "EUR",
-     "was": 28.0,
-     "url": "https://www.charlottetilbury.com/nl/product/pillow-talk-eyeliner",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/3x1xSOUCRFkumjdoulSVyZ/287b720c052884d60ca56dda7437bc78/Eyeliner-Pillowtalk-Open-Packshot.png?w=300&fm=jpg",
+     "was": 105.0,
+     "url": "https://www.charlottetilbury.com/nl/product/charlottes-iconic-magic-skin-duo",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/2SDvk9ElmhfrTpn59PUGMA/e042c6137c0481123b95305a9ced994d/Packshot_with_Products__CHARLOTTE-S_ICONIC_MAGIC_SKIN_DUO_-XMAS_2026-.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2565,12 +2574,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Charlotte's Iconic Magic Skin Duo",
-     "prijs": 78.75,
+     "naam": "Charlotte Tilbury Brow Cheat",
+     "prijs": 24.38,
      "munt": "EUR",
-     "was": 105.0,
-     "url": "https://www.charlottetilbury.com/nl/product/charlottes-iconic-magic-skin-duo",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/2SDvk9ElmhfrTpn59PUGMA/e042c6137c0481123b95305a9ced994d/Packshot_with_Products__CHARLOTTE-S_ICONIC_MAGIC_SKIN_DUO_-XMAS_2026-.png?w=300&fm=jpg",
+     "was": 32.5,
+     "url": "https://www.charlottetilbury.com/nl/product/brow-cheat-eyebrow-pencil-natural-brown",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/4BLyYMyW45geNQyn7ZHzZC/f81b4b6d3eb302534c5a42e3c78e1ced/CHEAT_NaturalBrown_OPEN_BOTH_ENDS.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2589,24 +2598,6 @@
      "was": 31.0,
      "url": "https://www.charlottetilbury.com/nl/product/super-nudes-eye-liner-duo",
      "img": "https://images.ctfassets.net/wlke2cbybljx/3gjCy7xE7VsXPuuZV7UAJq/c81ce4e49a051cfca5a0485b70613cb8/Supernudes-Eyeliner-Open-Packshot.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Brow Cheat",
-     "prijs": 24.38,
-     "munt": "EUR",
-     "was": 32.5,
-     "url": "https://www.charlottetilbury.com/nl/product/brow-cheat-eyebrow-pencil-natural-brown",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/4BLyYMyW45geNQyn7ZHzZC/f81b4b6d3eb302534c5a42e3c78e1ced/CHEAT_NaturalBrown_OPEN_BOTH_ENDS.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Airbrush Flawless Mini Setting Spray Kit",
-     "prijs": 24.0,
-     "munt": "EUR",
-     "was": 32.0,
-     "url": "https://www.charlottetilbury.com/nl/product/airbrush-flawless-setting-spray-duo-2025",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/4Qs3i5kbk02Z2q3nMyBHX0/9dd2a48647636eacf21de902b8accfaa/AIRBRUSH_FLAWLESS__MINI_SETTING_SPRAY_KIT-BUNDLE.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2682,6 +2673,24 @@
      "voorraad": true
     },
     {
+     "naam": "Charlotte Tilbury Joyphoria Perfume + Body Cream Set",
+     "prijs": 116.25,
+     "munt": "EUR",
+     "was": 155.0,
+     "url": "https://www.charlottetilbury.com/nl/product/joyphoria-perfume-body-cream-gift-set",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/4781Bovvqnnl8Zj83VROUr/39a7bbea40ef57ae1209ea52126f58bb/Packshot_with_Products__JOYPHORIA_PERFUME___BODY_CREAM_SET.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Star Confidence Perfume Set",
+     "prijs": 67.5,
+     "munt": "EUR",
+     "was": 90.0,
+     "url": "https://www.charlottetilbury.com/nl/product/perfume-gift-set-star-confidence",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/7rdcT7XX96s4Ei8SkN02HJ/c2c8f37ab0708c672927b0192e21d7f3/Packshot_with_Products__STAR_CONFIDENCE_PERFUME_SET.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
      "naam": "Charlotte Tilbury Airbrush Flawless Setting Spray Matte 34 ml",
      "prijs": 17.25,
      "munt": "EUR",
@@ -2691,12 +2700,12 @@
      "voorraad": true
     },
     {
-     "naam": "Charlotte Tilbury Joyphoria Perfume + Body Cream Set",
-     "prijs": 116.25,
+     "naam": "Charlotte Tilbury Charlotte's Fragrance Collection Of Emotions",
+     "prijs": 39.0,
      "munt": "EUR",
-     "was": 155.0,
-     "url": "https://www.charlottetilbury.com/nl/product/joyphoria-perfume-body-cream-gift-set",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/4781Bovvqnnl8Zj83VROUr/39a7bbea40ef57ae1209ea52126f58bb/Packshot_with_Products__JOYPHORIA_PERFUME___BODY_CREAM_SET.png?w=300&fm=jpg",
+     "was": 52.0,
+     "url": "https://www.charlottetilbury.com/nl/product/mini-perfume-gift-set",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/7fbzjkCuvzY2Rud1vQS243/8fb9c92d09f9b03fc2e022f2b85acaaf/Packshot_with_Products__CHARLOTTE-S_FRAGRANCE_COLLECTION_OF_EMOTIONS.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -2733,24 +2742,6 @@
      "was": 67.0,
      "url": "https://www.charlottetilbury.com/nl/product/immediate-skin-revival-flawless-base-set",
      "img": "https://images.ctfassets.net/wlke2cbybljx/6KQEiMhcOmqvpREqYICkl9/f250b3b0625b4b3b49ff07e2130e52f6/Immediate_Skin_Revival___Flawless_Base_Kit_-_flatlay.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Star Confidence Perfume Set",
-     "prijs": 67.5,
-     "munt": "EUR",
-     "was": 90.0,
-     "url": "https://www.charlottetilbury.com/nl/product/perfume-gift-set-star-confidence",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/7rdcT7XX96s4Ei8SkN02HJ/c2c8f37ab0708c672927b0192e21d7f3/Packshot_with_Products__STAR_CONFIDENCE_PERFUME_SET.png?w=300&fm=jpg",
-     "voorraad": true
-    },
-    {
-     "naam": "Charlotte Tilbury Charlotte's Fragrance Collection Of Emotions",
-     "prijs": 39.0,
-     "munt": "EUR",
-     "was": 52.0,
-     "url": "https://www.charlottetilbury.com/nl/product/mini-perfume-gift-set",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/7fbzjkCuvzY2Rud1vQS243/8fb9c92d09f9b03fc2e022f2b85acaaf/Packshot_with_Products__CHARLOTTE-S_FRAGRANCE_COLLECTION_OF_EMOTIONS.png?w=300&fm=jpg",
      "voorraad": true
     },
     {
@@ -4000,6 +3991,15 @@
      "prijs": 26.25,
      "munt": "EUR",
      "was": 35.0,
+     "url": "https://www.charlottetilbury.com/nl/product/exagger-eyes-eyeshadow-stick-ballet-quartz",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/4ZVDuIaoWWiy1Qk8Tif3lC/1705138b836d284706975e6f3eaab4c6/Ballet_Quartz_-_open.png?w=300&fm=jpg",
+     "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Exagger-eyes Easy Eyeshadow Stick",
+     "prijs": 26.25,
+     "munt": "EUR",
+     "was": 35.0,
      "url": "https://www.charlottetilbury.com/nl/product/exagger-eyes-eyeshadow-stick-mink-sculpt",
      "img": "https://images.ctfassets.net/wlke2cbybljx/6Is6fVoOJwXkit6yQCaiur/e6aee58c7e57e31a32ad0bc706033aca/Mink_Sculpt_-_open.png?w=300&fm=jpg",
      "voorraad": true
@@ -4156,6 +4156,15 @@
      "url": "https://www.charlottetilbury.com/nl/product/airbrush-blur-complexion-trio",
      "img": "https://images.ctfassets.net/wlke2cbybljx/Wk4WFIi9m4LiUCBz4deqD/7d050b149c5854ec3736eb5398380846/B10---Concealer-_-Complexion-Brush-_-AFF-Powder.png?w=300&fm=jpg",
      "voorraad": true
+    },
+    {
+     "naam": "Charlotte Tilbury Hollywood Instant Look In A Palette",
+     "prijs": 51.75,
+     "munt": "EUR",
+     "was": 69.0,
+     "url": "https://www.charlottetilbury.com/nl/product/instant-look-in-a-palette-pretty-glowing-beauty",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/RYWhLsVbYJamUG3unBYJQ/1438e2f5494d4bbf5d33678c6ed3f499/INSTANT_LOOK_IN_A_PALETTE_-_PRETTY__GLOWING_BEAUTY_-_ICON_BABY-OPEN.png?w=300&fm=jpg",
+     "voorraad": false
     },
     {
      "naam": "Charlotte Tilbury Charlotte's Magic Cream 30 ml",
@@ -4788,6 +4797,15 @@
      "voorraad": true
     },
     {
+     "naam": "Charlotte Tilbury Airbrush Flawless Mini Setting Spray Kit",
+     "prijs": 24.0,
+     "munt": "EUR",
+     "was": 32.0,
+     "url": "https://www.charlottetilbury.com/nl/product/airbrush-flawless-setting-spray-duo-2025",
+     "img": "https://images.ctfassets.net/wlke2cbybljx/4Qs3i5kbk02Z2q3nMyBHX0/9dd2a48647636eacf21de902b8accfaa/AIRBRUSH_FLAWLESS__MINI_SETTING_SPRAY_KIT-BUNDLE.png?w=300&fm=jpg",
+     "voorraad": false
+    },
+    {
      "naam": "Charlotte Tilbury Charlotte’s Legendary Beauty Icons",
      "prijs": 326.83,
      "munt": "EUR",
@@ -4947,15 +4965,6 @@
      "was": 46.0,
      "url": "https://www.charlottetilbury.com/nl/product/airbrush-flawless-blush-blur-pillow-talk",
      "img": "https://images.ctfassets.net/wlke2cbybljx/6DDZjltUss6gvQYsM9RVzj/ec127b8842f9183d79c00dc9c6c8b4a6/PILLOW_TALK.png?w=300&fm=jpg",
-     "voorraad": false
-    },
-    {
-     "naam": "Charlotte Tilbury Exagger-eyes Easy Eyeshadow Stick",
-     "prijs": 26.25,
-     "munt": "EUR",
-     "was": 35.0,
-     "url": "https://www.charlottetilbury.com/nl/product/exagger-eyes-eyeshadow-stick-ballet-quartz",
-     "img": "https://images.ctfassets.net/wlke2cbybljx/4ZVDuIaoWWiy1Qk8Tif3lC/1705138b836d284706975e6f3eaab4c6/Ballet_Quartz_-_open.png?w=300&fm=jpg",
      "voorraad": false
     },
     {
